@@ -20,7 +20,7 @@
 /* Colors */
 :root {
   --color-default: #212529;
-  --color-primary: #ce1212;
+  --color-primary: #593FA2;
   --color-secondary: #37373f;
 }
 
@@ -65,7 +65,7 @@ section {
 }
 
 .section-bg {
-  background-color: #eee;
+  background-color: #fff;
 }
 
 .section-header {
@@ -1521,12 +1521,12 @@ section {
   transition: 0.5s;
   color: #fff;
   background: var(--color-primary);
-  box-shadow: 0 8px 28px rgba(206, 18, 18, 0.2);
+  box-shadow: 0 8px 28px rgba(33, 5, 33, 0.2);
 }
 
 .hero .btn-book-a-table:hover {
-  background: rgba(206, 18, 18, 0.8);
-  box-shadow: 0 8px 28px rgba(206, 18, 18, 0.45);
+  background: rgba(40, 3, 78, 0.8);
+  box-shadow: 0 8px 28px rgba(22, 1, 35, 0.45);
 }
 
 .hero .btn-watch-video {

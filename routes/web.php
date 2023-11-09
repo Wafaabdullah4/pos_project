@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\FoodController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 
@@ -18,7 +19,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    return view('auth.login');
+    return view('LandingPage');
 });
 
 Auth::routes();
@@ -53,4 +54,5 @@ Route::middleware(['auth', 'user-access:kurir'])->group(function () {
     Route::get('/kurir/home', [HomeController::class, 'kurirHome'])->name('kurir.home');
 });
 
-Route::resource('/crud', UserController::class);
+Route::resource('users', UserController::class);
+Route::resource('foods', FoodController::class);

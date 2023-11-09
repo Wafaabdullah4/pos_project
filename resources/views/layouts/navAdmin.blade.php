@@ -26,8 +26,11 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
-                <a class="navbar-brand" href="/crud">
-                    CRUD
+                <a class="navbar-brand" href="users">
+                    users
+                </a>
+                <a class="navbar-brand" href="foods">
+                    Food
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
