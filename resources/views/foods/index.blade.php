@@ -7,6 +7,7 @@
         <thead>
             <tr>
                 <th>ID</th>
+                <th>Photo</th>
                 <th>Name</th>
                 <th>Description</th>
                 <th>Price</th>
@@ -16,6 +17,9 @@
         <tbody>
             @foreach ($foods as $food)
                 <tr>
+                    <td class="text-center">
+                        <img src="{{ asset('/storage/foods/'.$food->image) }}" class="rounded" style="width: 150px">
+                    </td>
                     <td>{{ $food->id }}</td>
                     <td>{{ $food->name }}</td>
                     <td>{{ $food->description }}</td>
@@ -35,4 +39,5 @@
             @endforeach
         </tbody>
     </table>
+    {{ $foods->links() }}
 @endsection

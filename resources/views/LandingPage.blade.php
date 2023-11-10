@@ -133,7 +133,7 @@
                         data-aos="fade-up" data-aos-delay="150">
                         <div class="call-us position-absolute">
                             <h4>Book a Table</h4>
-                            <p>+1 5589 55488 55</p>
+                            <p>+62 613 5678 9876</p>
                         </div>
                     </div>
                     <div class="col-lg-5 d-flex align-items-end" data-aos="fade-up" data-aos-delay="300">

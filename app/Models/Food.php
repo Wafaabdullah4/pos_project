@@ -9,7 +9,7 @@ class Food extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'description', 'price'];
+    protected $fillable = ['image','name', 'description', 'price'];
     protected $table = 'foods';
 
 

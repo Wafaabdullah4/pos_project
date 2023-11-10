@@ -4,7 +4,7 @@
     <style>
         .login-page {
             width: 100%;
-            height: 100vh;
+            height: 100%;
             overflow: auto;
             background-color: #7C53AF;
 
@@ -12,7 +12,7 @@
 
         .parent-login {
             width: 70%;
-            height: 80vh;
+            height: 80%;
             margin: 80px auto;
             background-color: #fff;
             overflow: auto;
