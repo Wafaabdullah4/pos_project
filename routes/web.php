@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FoodController;
+use App\Http\Controllers\PesananController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 
@@ -55,4 +56,4 @@ Route::middleware(['auth', 'user-access:kurir'])->group(function () {
 });
 
 Route::resource('users', UserController::class);
-Route::resource('foods', FoodController::class);
+Route::resource('pesanans', PesananController::class);

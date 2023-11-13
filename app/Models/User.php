@@ -12,9 +12,9 @@ use Illuminate\Database\Eloquent\Casts\Attribute;
 class User extends Authenticatable
 {
 
-    public function orders()
+    public function pesanans()
     {
-        return $this->hasMany(Order::class);
+        return $this->hasMany(Pesanan::class);
     }
 
     use HasApiTokens, HasFactory, Notifiable;

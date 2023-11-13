@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pesanan;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
+
+
     public function index()
     {
         $users = User::all();
@@ -16,7 +19,7 @@ class UserController extends Controller
 
     public function create()
     {
-        return view('users.create');
+        return view('admin.create');
     }
 
     public function store(Request $request)
@@ -43,7 +46,7 @@ class UserController extends Controller
 
         $users->save();
 
-        return redirect()->route('admin.index')->with('success', 'User created successfully');
+        return redirect()->route('home')->with('success', 'User created successfully');
     }
 
     public function show(User $users)
