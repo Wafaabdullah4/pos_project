@@ -242,7 +242,6 @@
                                 </svg>
                             </div>
 
-                            <span style="color: #7C53AF; margin-left: 340px;">Lupa Password?</span>
                             <button type="submit" class="btn-login">{{ __('Login') }}</button>
                         </form>
 
