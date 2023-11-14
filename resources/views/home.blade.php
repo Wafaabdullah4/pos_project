@@ -874,7 +874,10 @@
                             <textarea class="form-control" name="keterangan" rows="5"
                                 placeholder="Keterangan" required></textarea>
                         </div>
-                      
+                        <div class="form-group">
+                        <input type="text" name="kurir" class="form-control" id="kurir"
+                                placeholder="kurir" required>
+                                </div>
                     </div>
                     <div class="form-group mt-3">
                         <div class="mb-3">

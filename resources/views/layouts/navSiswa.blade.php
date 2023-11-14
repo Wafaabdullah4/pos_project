@@ -127,6 +127,13 @@
                 <!-- <img src="assets/img/logo.png" alt=""> -->
                 <h1>POS<span>.</span></h1>
             </a>
+            @php
+               
+               use App\Models\Pesanan;
+               $pesanan = pesanan::all()->count();
+
+           @endphp
+
 
             <nav id="navbar" class="navbar ">
                 <ul>
@@ -141,7 +148,7 @@
             <li type="button" class="  position-relative">
 Pesanan Saya
 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill " style="background-color: #593FA2;">
-99+
+{{$pesanan}}
 </span>
     </li>
             <div class="btn-book-a-table">
