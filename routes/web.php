@@ -57,3 +57,8 @@ Route::middleware(['auth', 'user-access:kurir'])->group(function () {
 
 Route::resource('users', UserController::class);
 Route::resource('pesanans', PesananController::class);
+Route::get('myorder', [PesananController::class, 'myorder']);
+
+
+Route::get('kurirorder', [PesananController::class, 'kurirorder']);
+

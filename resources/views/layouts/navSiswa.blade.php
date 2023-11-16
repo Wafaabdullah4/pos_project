@@ -49,68 +49,7 @@
 
 <body>
     {{-- <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/admin/home') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <a class="navbar-brand" href="{{ url('users') }}">
-                    users
-                </a>
-                <a class="navbar-brand" href="{{ url('pesanans') }}">
-                    Food
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
+     
 
         <main class="py-4">
             @yield('content')
@@ -122,17 +61,18 @@
     <header id="header" class="header fixed-top d-flex align-items-center">
         <div class="container d-flex align-items-center justify-content-between">
 
-            <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+            <a href="{{url('home')}}" class="logo d-flex align-items-center me-auto me-lg-0">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
                 <!-- <img src="assets/img/logo.png" alt=""> -->
                 <h1>POS<span>.</span></h1>
             </a>
             @php
-               
-               use App\Models\Pesanan;
-               $pesanan = pesanan::all()->count();
+    use Illuminate\Support\Facades\Auth;
+    use App\Models\Pesanan;
 
-           @endphp
+    $userId = Auth::id(); // Mendapatkan ID pengguna yang login
+    $jumlahPesanan = Pesanan::where('user_id', $userId)->count();
+@endphp
 
 
             <nav id="navbar" class="navbar ">
@@ -141,16 +81,18 @@
                     <li><a href="#about">Tentang</a></li>
                     <li><a href="#menu">Pesan</a></li>
                     <li><a href="#events">Faq</a></li>
-                   
+                    <li type="button" class="  position-relative">
+                        <a href="{{ url('myorder') }}">Pesanan Saya</a>
+
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill "
+                            style="background-color: #593FA2;">
+                            {{ $jumlahPesanan }}
+                        </span>
+                    </li>
 
                 </ul>
             </nav><!-- .navbar -->
-            <li type="button" class="  position-relative">
-Pesanan Saya
-<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill " style="background-color: #593FA2;">
-{{$pesanan}}
-</span>
-    </li>
+
             <div class="btn-book-a-table">
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">

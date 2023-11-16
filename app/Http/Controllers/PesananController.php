@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 use App\Models\Pesanan;
 use Illuminate\Http\Request;
@@ -18,7 +19,7 @@ class PesananController extends Controller
     public function create()
     {
         $kurirs = User::where('type', 2)->get();
-        return view('pesanan.create', compact('kurirs'));
+        return view('home', compact('kurirs'));
     }
 
     public function store(Request $request)
@@ -42,8 +43,9 @@ class PesananController extends Controller
         ]);
 
         $user->pesanans()->save($pesanan);
+        return view('home');
 
-        return redirect()->route('home')->with('success', 'Pesanan berhasil ditempatkan.');
+        // return redirect()->route('home')->with('success', 'Pesanan berhasil ditempatkan.');
     }
     public function edit(Pesanan $pesanan)
     {
@@ -78,4 +80,22 @@ class PesananController extends Controller
 
         return redirect()->route('home')->with('success', 'Pesanan berhasil dihapus.');
     }
+    
+
+    public function myorder()
+    {
+        $userId = Auth::id(); // Mendapatkan ID pengguna yang login
+        $pesanans = Pesanan::where('user_id', $userId)->latest()->get();
+        return view('studentOrder.index', compact('pesanans'));
+    }
+    public function kurirorder()
+    {
+        $userId = Auth::id(); // Mendapatkan ID pengguna yang login
+        $pesanans = Pesanan::whereHas('kurir', function ($query) use ($userId) {
+            $query->where('user_id', $userId);
+        })->latest()->get();
+        
+        return view('kurirOrder.index', compact('pesanans'));
+    }
+
 }

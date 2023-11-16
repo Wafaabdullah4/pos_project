@@ -1,4 +1,4 @@
-@extends('layouts.navSiswa')
+@extends('layouts.navKurir')
 @section('content')
     <div class="container">
         <div class="row justify-content-center">

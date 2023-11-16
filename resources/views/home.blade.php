@@ -874,11 +874,21 @@
                             <textarea class="form-control" name="keterangan" rows="5"
                                 placeholder="Keterangan" required></textarea>
                         </div>
+
+         @php
+         use App\Models\User;
+         $kurirs = User::where('type', 2)->get();
+         @endphp
+
+       
                         <div class="form-group">
-                        <input type="text" name="kurir" class="form-control" id="kurir"
-                                placeholder="kurir" required>
+                                    <label for="kurir">Kurir</label>
+                                    <select name="kurir" id="kurir" class="form-control" required>
+                                        @foreach ($kurirs as $kurir)
+                                            <option value="{{ $kurir->id }}">{{ $kurir->name }}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
-                    </div>
                     <div class="form-group mt-3">
                         <div class="mb-3">
                             <div class="loading">Loading</div>
