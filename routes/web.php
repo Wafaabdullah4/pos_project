@@ -60,5 +60,5 @@ Route::resource('pesanans', PesananController::class);
 Route::get('myorder', [PesananController::class, 'myorder'])->name('myprder');
 
 
-Route::get('kurirorder', [PesananController::class, 'kurirorder']);
+Route::get('kurirorder', [PesananController::class, 'kurirorder'])->name('kurirorder');
 

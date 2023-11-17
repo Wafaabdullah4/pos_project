@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
+    <link rel="stylesheet" href="{{asset('style.css')}}">
+
 
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">

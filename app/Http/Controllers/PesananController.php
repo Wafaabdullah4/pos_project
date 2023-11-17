@@ -78,7 +78,7 @@ class PesananController extends Controller
     {
         $pesanan->delete();
 
-        return redirect()->route('/kurirorder')->with('success', 'Pesanan berhasil dihapus.');
+        return redirect()->route('kurirorder')->with('success', 'Pesanan berhasil dihapus.');
     }
     
 
@@ -88,12 +88,19 @@ class PesananController extends Controller
         $pesanans = Pesanan::where('user_id', $userId)->latest()->get();
         return view('studentOrder.index', compact('pesanans'));
     }
+    // public function kurirorder()
+    // {
+    //     $userId = Auth::id(); // Mendapatkan ID pengguna yang login
+    //     $pesanans = Pesanan::where('user_id', $userId)->latest()->get();
+    //     return view('kurirOrder.index', compact('pesanans'));
+    // }
+
+
     public function kurirorder()
     {
         $userId = Auth::id(); // Mendapatkan ID pengguna yang login
-        $pesanans = Pesanan::whereHas('kurir', function ($query) use ($userId) {
-            $query->where('user_id', $userId);
-        })->latest()->get();
+
+        $pesanans = Pesanan::where('kurir', $userId)->latest()->get();
         
         return view('kurirOrder.index', compact('pesanans'));
     }
