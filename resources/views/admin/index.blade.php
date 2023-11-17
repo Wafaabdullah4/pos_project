@@ -7,7 +7,7 @@
             <thead class="table-dark">
                 <tr>
                     <th scope="col">No</th>
-                    <th scope="col">Nama</th>
+                    <th scope="col">Name</th>
                     <th scope="col">Kelas</th>
                     <th scope="col">Jenis Kelamin</th>
                     <th scope="col">Email</th>
