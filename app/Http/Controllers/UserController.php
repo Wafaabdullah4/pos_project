@@ -46,7 +46,7 @@ class UserController extends Controller
 
         $users->save();
 
-        return redirect()->route('/user')->with('success', 'User created successfully');
+        return redirect()->route('admin.home')->with('success', 'User created successfully');
     }
 
     public function show(User $users)

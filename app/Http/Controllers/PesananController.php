@@ -78,7 +78,7 @@ class PesananController extends Controller
     {
         $pesanan->delete();
 
-        return redirect()->route('home')->with('success', 'Pesanan berhasil dihapus.');
+        return redirect()->route('/kurirorder')->with('success', 'Pesanan berhasil dihapus.');
     }
     
 
