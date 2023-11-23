@@ -19,7 +19,7 @@ class PesananController extends Controller
     public function create()
     {
         $kurirs = User::where('type', 2)->get();
-        return view('home', compact('kurirs'));
+        return view('studentOrder.create', compact('kurirs'));
     }
 
     public function store(Request $request)
@@ -43,9 +43,9 @@ class PesananController extends Controller
         ]);
 
         $user->pesanans()->save($pesanan);
-        return view('home');
 
-        // return redirect()->route('home')->with('success', 'Pesanan berhasil ditempatkan.');
+
+        return redirect()->route('myorder')->with('success', 'Pesanan berhasil ditempatkan.');
     }
     public function edit(Pesanan $pesanan)
     {
@@ -80,7 +80,7 @@ class PesananController extends Controller
 
         return redirect()->route('kurirorder')->with('success', 'Pesanan berhasil dihapus.');
     }
-    
+
 
     public function myorder()
     {
@@ -101,7 +101,7 @@ class PesananController extends Controller
         $userId = Auth::id(); // Mendapatkan ID pengguna yang login
 
         $pesanans = Pesanan::where('kurir', $userId)->latest()->get();
-        
+
         return view('kurirOrder.index', compact('pesanans'));
     }
 

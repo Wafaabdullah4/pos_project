@@ -33,13 +33,7 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet">
 
-    <!-- =======================================================
-  * Template Name: Yummy
-  * Updated: Sep 18 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+ 
 </head>
 
 <body>
@@ -91,9 +85,8 @@
 
         </div>
     </header><!-- End Header -->
-
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="hero d-flex align-items-center section-bg">
+ <!-- ======= Hero Section ======= -->
+ <section id="hero" class="hero d-flex align-items-center section-bg">
         <div class="container">
             <div class="row justify-content-between gy-5">
                 <div
@@ -109,8 +102,8 @@
                     </div>
                 </div>
                 <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
-                    <img src="{{ asset('assets/img/beranda.png') }}" class="img-fluid" alt=""
-                        data-aos="zoom-out" data-aos-delay="300">
+                    <img src="{{ asset('assets/img/beranda.png') }}" class="img-fluid" alt="" data-aos="zoom-out"
+                        data-aos-delay="300">
                 </div>
             </div>
         </div>
@@ -251,8 +244,8 @@
 
                     <div class="col-lg-3 col-md-6">
                         <div class="stats-item text-center w-100 h-100">
-                            <span data-purecounter-start="0" data-purecounter-end="1453"
-                                data-purecounter-duration="1" class="purecounter"></span>
+                            <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1"
+                                class="purecounter"></span>
                             <p>Hours Of Support</p>
                         </div>
                     </div><!-- End Stats Item -->
@@ -868,8 +861,7 @@
 
                 <div class="row gy-4">
 
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
-                        data-aos-delay="100">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                         <div class="chef-member">
                             <div class="member-img">
                                 <img src="assets/img/chefs/chefs-1.jpg" class="img-fluid" alt="">
@@ -889,8 +881,7 @@
                         </div>
                     </div><!-- End Chefs Member -->
 
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
-                        data-aos-delay="200">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
                         <div class="chef-member">
                             <div class="member-img">
                                 <img src="assets/img/chefs/chefs-2.jpg" class="img-fluid" alt="">
@@ -910,8 +901,7 @@
                         </div>
                     </div><!-- End Chefs Member -->
 
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
-                        data-aos-delay="300">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
                         <div class="chef-member">
                             <div class="member-img">
                                 <img src="assets/img/chefs/chefs-3.jpg" class="img-fluid" alt="">
@@ -936,79 +926,68 @@
             </div>
         </section><!-- End Chefs Section -->
 
-        <!-- ======= Book A Table Section ======= -->
         <section id="book-a-table" class="book-a-table">
-            <div class="container" data-aos="fade-up">
+    <div class="container" data-aos="fade-up">
+        <div class="section-header">
+            <h2>Buat Pesanan Baru</h2>
+            <p>Buat <span>Pesanan Anda</span> Bersama Kami</p>
+        </div>
 
-                <div class="section-header">
-                    <h2>Book A Table</h2>
-                    <p>Book <span>Your Stay</span> With Us</p>
-                </div>
+        <div class="row g-0">
+            <div class="col-lg-4 reservation-img" style="background-image: url(assets/img/reservation.jpg);"
+                data-aos="zoom-out" data-aos-delay="200"></div>
 
-                <div class="row g-0">
+            <div class="col-lg-8 d-flex align-items-center reservation-form-bg">
+                <form method="POST" action="{{ route('pesanans.store') }}" role="form"
+                    class="php-email-form" data-aos="fade-up" data-aos-delay="100">
+                    @csrf
+                    <div class="row gy-4">
+                        <div class="col-lg-4 col-md-6">
+                            <input type="number" name="jumlah_pesanan" class="form-control" id="jumlah_pesanan"
+                                placeholder="Jumlah Pesanan" required>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <input type="text" name="barang" class="form-control" id="barang"
+                                placeholder="Nama Barang" required>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <input type="number" name="harga" class="form-control" id="harga"
+                                placeholder="Harga" required>
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+                            <textarea class="form-control" name="keterangan" rows="5"
+                                placeholder="Keterangan" required></textarea>
+                        </div>
 
-                    <div class="col-lg-4 reservation-img" style="background-image: url(assets/img/reservation.jpg);"
-                        data-aos="zoom-out" data-aos-delay="200"></div>
+         @php
+         use App\Models\User;
+         $kurirs = User::where('type', 2)->get();
+         @endphp
 
-                    <div class="col-lg-8 d-flex align-items-center reservation-form-bg">
-                        <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form"
-                            data-aos="fade-up" data-aos-delay="100">
-                            <div class="row gy-4">
-                                <div class="col-lg-4 col-md-6">
-                                    <input type="text" name="name" class="form-control" id="name"
-                                        placeholder="Your Name" data-rule="minlen:4"
-                                        data-msg="Please enter at least 4 chars">
-                                    <div class="validate"></div>
+       
+                        <div class="form-group">
+                                    <label for="kurir">Kurir</label>
+                                    <select name="kurir" id="kurir" class="form-control" required>
+                                        @foreach ($kurirs as $kurir)
+                                            <option value="{{ $kurir->id }}">{{ $kurir->name }}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <input type="email" class="form-control" name="email" id="email"
-                                        placeholder="Your Email" data-rule="email"
-                                        data-msg="Please enter a valid email">
-                                    <div class="validate"></div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <input type="text" class="form-control" name="phone" id="phone"
-                                        placeholder="Your Phone" data-rule="minlen:4"
-                                        data-msg="Please enter at least 4 chars">
-                                    <div class="validate"></div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <input type="text" name="date" class="form-control" id="date"
-                                        placeholder="Date" data-rule="minlen:4"
-                                        data-msg="Please enter at least 4 chars">
-                                    <div class="validate"></div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <input type="text" class="form-control" name="time" id="time"
-                                        placeholder="Time" data-rule="minlen:4"
-                                        data-msg="Please enter at least 4 chars">
-                                    <div class="validate"></div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <input type="number" class="form-control" name="people" id="people"
-                                        placeholder="# of people" data-rule="minlen:1"
-                                        data-msg="Please enter at least 1 chars">
-                                    <div class="validate"></div>
-                                </div>
-                            </div>
-                            <div class="form-group mt-3">
-                                <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
-                                <div class="validate"></div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="loading">Loading</div>
-                                <div class="error-message"></div>
-                                <div class="sent-message">Your booking request was sent. We will call back or send an
-                                    Email to confirm your reservation. Thank you!</div>
-                            </div>
-                            <div class="text-center"><button type="submit">Book a Table</button></div>
-                        </form>
-                    </div><!-- End Reservation Form -->
+                    <div class="form-group mt-3">
+                        <div class="mb-3">
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Pesanan Anda telah dibuat. Terima kasih!</div>
+                        </div>
+                        <div class="text-center"><button type="submit">Buat Pesanan</button></div>
+                    </div>
+                </form>
+            </div><!-- End Reservation Form -->
+        </div>
+    </div>
+</section>
+<!-- End Book A Table Section -->
 
-                </div>
-
-            </div>
-        </section><!-- End Book A Table Section -->
 
         <!-- ======= Gallery Section ======= -->
         <section id="gallery" class="gallery section-bg">
@@ -1125,8 +1104,8 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" name="subject" id="subject"
-                            placeholder="Subject" required>
+                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
+                            required>
                     </div>
                     <div class="form-group">
                         <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
@@ -1143,6 +1122,7 @@
         </section><!-- End Contact Section -->
 
     </main><!-- End #main -->
+
 
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
@@ -1210,6 +1190,9 @@
         </div>
 
     </footer><!-- End Footer -->
+    <!-- End Footer -->
+
+
     <!-- End Footer -->
 
     <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i

@@ -1,16 +1,13 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-
-    <link rel="stylesheet" href="{{asset('style.css')}}">
-
+    <title>Pesan Online SMK PI</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
 
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
@@ -35,59 +32,47 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet">
-
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-
+    <link href="{{ asset('style.css') }}" rel="stylesheet">
+    <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <!-- ... -->
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
 </head>
 
 <body>
-    {{-- <div id="app">
-     
 
-        <main class="py-4">
-            @yield('content')
-        </main>
-    </div> --}}
 
+
+    @php
+        use Illuminate\Support\Facades\Auth;
+        use App\Models\Pesanan;
+
+        $userId = Auth::id(); // Mendapatkan ID pengguna yang login
+        $jumlahPesanan = Pesanan::where('user_id', $userId)->count();
+    @endphp
 
     <!-- ======= Header ======= -->
     <header id="header" class="header fixed-top d-flex align-items-center">
         <div class="container d-flex align-items-center justify-content-between">
 
-            <a href="{{url('home')}}" class="logo d-flex align-items-center me-auto me-lg-0">
+            <a href="{{ url('home') }}" class="logo d-flex align-items-center me-auto me-lg-0"
+                style="text-decoration: none">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
                 <!-- <img src="assets/img/logo.png" alt=""> -->
                 <h1>POS<span>.</span></h1>
             </a>
-            @php
-    use Illuminate\Support\Facades\Auth;
-    use App\Models\Pesanan;
-
-    $userId = Auth::id(); // Mendapatkan ID pengguna yang login
-    $jumlahPesanan = Pesanan::where('user_id', $userId)->count();
-@endphp
 
 
             <nav id="navbar" class="navbar ">
                 <ul>
-                    <li><a href="#hero">Beranda</a></li>
-                    <li><a href="#about">Tentang</a></li>
-                    <li><a href="#menu">Pesan</a></li>
-                    <li><a href="#events">Faq</a></li>
+                    <li><a href="home" style="text-decoration: none">Menu</a></li>
+                    <li> <a href="{{route('pesanans.create') }}" style="text-decoration: none">Pesan</a></li>
                     <li type="button" class="  position-relative">
-                        <a href="{{ url('myorder') }}">Pesanan Saya</a>
+                        <a href="{{ url('myorder') }}" style="text-decoration: none">Pesanan Saya</a>
 
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill "
-                            style="background-color: #593FA2;">
+                            style="background-color: #593FA2; text-decoration: none"">
                             {{ $jumlahPesanan }}
                         </span>
                     </li>
@@ -127,12 +112,79 @@
     <main class="py-4">
         @yield('content')
     </main>
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer mt-5">
+
+        <div class="container">
+            <div class="row gy-3">
+                <div class="col-lg-3 col-md-6 d-flex">
+                    <i class="bi bi-geo-alt icon"></i>
+                    <div>
+                        <h4>Address</h4>
+                        <p>
+                            A108 Adam Street <br>
+                            New York, NY 535022 - US<br>
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links d-flex">
+                    <i class="bi bi-telephone icon"></i>
+                    <div>
+                        <h4>Reservations</h4>
+                        <p>
+                            <strong>Phone:</strong> +1 5589 55488 55<br>
+                            <strong>Email:</strong> info@example.com<br>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links d-flex">
+                    <i class="bi bi-clock icon"></i>
+                    <div>
+                        <h4>Opening Hours</h4>
+                        <p>
+                            <strong>Mon-Sat: 11AM</strong> - 23PM<br>
+                            Sunday: Closed
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Follow Us</h4>
+                    <div class="social-links d-flex">
+                        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Yummy</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/ -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+        </div>
+
+    </footer><!-- End Footer -->
+    <!-- End Footer -->
 
 
+    <!-- End Footer -->
 
-
-
-
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
 
     <div id="preloader"></div>
 
@@ -146,14 +198,7 @@
 
     <!-- Template Main JS File -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
-    <script>
-        CKEDITOR.replace('content');
-    </script>
 </body>
 
 </html>
