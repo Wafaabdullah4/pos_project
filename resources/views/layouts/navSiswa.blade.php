@@ -67,7 +67,7 @@
             <nav id="navbar" class="navbar ">
                 <ul>
                     <li><a href="home" style="text-decoration: none">Menu</a></li>
-                    <li> <a href="{{route('pesanans.create') }}" style="text-decoration: none">Pesan</a></li>
+                    {{-- <li> <a href="{{route('pesanans.create') }}" style="text-decoration: none">Pesan</a></li> --}}
                     <li type="button" class="  position-relative">
                         <a href="{{ url('myorder') }}" style="text-decoration: none">Pesanan Saya</a>
 

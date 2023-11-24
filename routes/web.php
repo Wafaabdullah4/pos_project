@@ -4,8 +4,10 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FoodController;
+use App\Http\Controllers\MenuController;
 use App\Http\Controllers\PesananController;
 use App\Http\Controllers\UserController;
+use App\Models\Menu;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -33,7 +35,8 @@ All Normal Users Routes List
 Route::middleware(['auth', 'user-access:user'])->group(function () {
 
     Route::get('/home', [HomeController::class, 'index'])->name('home');
-    Route::get('myorder', [PesananController::class, 'myorder'])->name('myprder');
+    Route::get('/myorder', [PesananController::class, 'myorder'])->name('myorder');
+    Route::get('/home', [MenuController::class, 'menu'])->name('menu');
 });
 
 /*------------------------------------------
@@ -45,6 +48,7 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
 
     Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home');
     Route::resource('users', UserController::class);
+    Route::resource('menu', PesananCoMMenntroller::class);
 });
 
 /*------------------------------------------

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Pesanan extends Model
 {
     use HasFactory;
-    protected $fillable = ['user_id', 'jumlah_pesanan', 'barang', 'harga', 'keterangan', 'kurir'];
+    protected $fillable = ['user_id', 'jumlah_pesanan', 'barang', 'harga', 'keterangan', 'kurir','menu'];
 
     public function kurir()
     {
@@ -17,5 +17,9 @@ class Pesanan extends Model
     public function users()
     {
         return $this->belongsTo(User::class);
+    }
+    public function menu()
+    {
+        return $this->belongsTo(Menu::class);
     }
 }

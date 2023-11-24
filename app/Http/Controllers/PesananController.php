@@ -19,7 +19,7 @@ class PesananController extends Controller
     public function create()
     {
         $kurirs = User::where('type', 2)->get();
-        return view('studentOrder.create', compact('kurirs'));
+        return view('home', compact('kurirs'));
     }
 
     public function store(Request $request)
@@ -30,6 +30,7 @@ class PesananController extends Controller
             'harga' => 'required|numeric',
             'keterangan' => 'required|string',
             'kurir' => 'required|string',
+            'menu' => 'required|string',
         ]);
 
         $user = auth()->user();
@@ -40,6 +41,7 @@ class PesananController extends Controller
             'harga' => $request->input('harga'),
             'keterangan' => $request->input('keterangan'),
             'kurir' => $request->input('kurir'),
+            'menu' => $request->input('menu'),
         ]);
 
         $user->pesanans()->save($pesanan);
