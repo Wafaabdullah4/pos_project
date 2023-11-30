@@ -6,6 +6,12 @@ use App\Models\Pesanan;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+//return type View
+use Illuminate\View\View;
+
+//return type redirectResponse
+use Illuminate\Http\RedirectResponse;
+
 
 class UserController extends Controller
 {
@@ -91,10 +97,24 @@ class UserController extends Controller
         return redirect()->route('admin.index')->with('success', 'User updated successfully');
     }
 
-    public function destroy(User $users)
+    // public function destroy(User $users)
+    // {
+    //     $users->delete();
+
+    //     return redirect()->route('admin.index')->with('success', 'User deleted successfully');
+    // }
+
+    public function destroy($id): RedirectResponse
     {
+        //get post by ID
+        $users = User::findOrFail($id);
+
+        
+        //delete post
         $users->delete();
 
-        return redirect()->route('admin.index')->with('success', 'User deleted successfully');
+        //redirect to index
+        return redirect()->route('admin.siswa')->with(['success' => 'Data Berhasil Dihapus!']);
     }
 }
+
