@@ -7,12 +7,13 @@
         <div class="card-body">
             <div class="d-flex justify-content-between">
                 <div class="text-start">
-                    <h4 class="card-title">Data Kurir</h4>
+                    <h4 class="card-title">Data Siswa</h4>
                 </div>
                 <a href="{{ route('users.create') }}" class="btn btn-success">Add User</a>
             </div>
             
-          <div class="table-responsive">
+          {{-- <a href="{{ route('users.edit') }}" class="btn btn-danger">Edit</a> --}}
+          <div class="table-responsive mt-4">
             <table class="table">
               <thead>
     {{-- <div class="container"> --}}
@@ -32,7 +33,7 @@
             <tbody>
                 @php $no=1 @endphp
                 @foreach ($users as $data)
-                @if ($data->type == 'kurir')
+                @if ($data->type == 'user')
                     
                 <tr>
                     <th scope="row"> {{ $no++ }}</th>

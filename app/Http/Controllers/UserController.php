@@ -16,7 +16,12 @@ class UserController extends Controller
         $users = User::all();
         return view('admin.index', compact('users'));
     }
-
+    public function siswa()
+    {
+        $users = User::all();
+        return view('admin.siswa', compact('users'));
+    }
+    
     public function create()
     {
         return view('admin.create');
@@ -53,9 +58,12 @@ class UserController extends Controller
     {
         return view('admin.show', compact('user'));
     }
-
-    public function edit(User $users)
+    public function edit($id)
     {
+        // Retrieve the user from the database using the $id
+        $user = User::find($id);
+    
+        // Pass the $user variable to the view
         return view('admin.edit', compact('user'));
     }
 

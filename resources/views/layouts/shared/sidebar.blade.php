@@ -29,7 +29,7 @@
         <div class="collapse" id="ui-basic">
           <ul class="nav flex-column sub-menu">
             <li class="nav-item"> <a class="nav-link" href="{{ url('users') }}">Kurir</a></li>
-            <li class="nav-item"> <a class="nav-link" href="{{ url('users') }}">Siswa</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ url('/admin/siswa') }}">Siswa</a></li>
           </ul>
         </div>
       </li>
