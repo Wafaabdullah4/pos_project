@@ -16,7 +16,7 @@
                             <th>Harga Pesanan</th>
                             <th>Keterangan</th>
                             <th>KURIR</th>
-                            <th>Action</th>
+                            <th>STATUS</th>
                         </tr>
                         <tbody>
                             @php

@@ -49,7 +49,7 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home');
     Route::resource('users', UserController::class);
     Route::get('/admin/siswa', [UserController::class, 'siswa'])->name('admin.siswa');
-    Route::resource('menu', PesananCoMMenntroller::class);
+    Route::resource('menu', MenuController::class);
 });
 
 /*------------------------------------------
