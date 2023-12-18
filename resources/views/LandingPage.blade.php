@@ -10,8 +10,8 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="{{ asset('assets/img/pi.png') }}" rel="icon">
+    {{-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> --}}
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,7 +33,7 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet">
 
- 
+
 </head>
 
 <body>
@@ -85,15 +85,14 @@
 
         </div>
     </header><!-- End Header -->
- <!-- ======= Hero Section ======= -->
- <section id="hero" class="hero d-flex align-items-center section-bg">
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero d-flex align-items-center section-bg">
         <div class="container">
             <div class="row justify-content-between gy-5">
                 <div
                     class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
                     <h2 data-aos="fade-up">Selamat Datang<br>Website POS</h2>
-                    <p data-aos="fade-up" data-aos-delay="100">Sed autem laudantium dolores. Voluptatem itaque ea
-                        consequatur eveniet. Eum quas beatae cumque eum quaerat.</p>
+                    <p data-aos="fade-up" data-aos-delay="100">Pesan Online Siswa </p>
                     <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
                         <a href="#book-a-table" class="btn-book-a-table">Ayoo Join</a>
                         {{-- <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
@@ -102,8 +101,8 @@
                     </div>
                 </div>
                 <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
-                    <img src="{{ asset('assets/img/beranda.png') }}" class="img-fluid" alt="" data-aos="zoom-out"
-                        data-aos-delay="300">
+                    <img src="{{ asset('assets/img/beranda.png') }}" class="img-fluid" alt=""
+                        data-aos="zoom-out" data-aos-delay="300">
                 </div>
             </div>
         </div>
@@ -125,16 +124,16 @@
                         style="background-image: url({{ asset('assets/img/tentang.png') }}) ; background-repeat:no-repeat;"
                         data-aos="fade-up" data-aos-delay="150">
                         <div class="call-us position-absolute">
-                            <h4>Book a Table</h4>
-                            <p>+62 613 5678 9876</p>
+                            <h4>Pelayanan Kami</h4>
+                            <p>posprakarya@gmail.com</p>
                         </div>
                     </div>
                     <div class="col-lg-5 d-flex align-items-end" data-aos="fade-up" data-aos-delay="300">
                         <div class="content ps-0 ps-lg-5">
                             <p class="fst-italic">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore
-                                magna aliqua.
+                                Pesan online siswa adalah website untuk memudahkan Siswa membeli makanan dan minuman
+                                yang siswa pesan.
+                                <br>
                             </p>
                             <ul>
                                 <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo
@@ -146,8 +145,9 @@
                                     storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
                             </ul>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quas alias,
-                                cupiditate totam cum repellat porro exercitationem quasi eligendi molestias!
+                                Pesan online siswa juga menyediakan fitur fitur seperti siswa dapat melihat daftar
+                                makanan/minuman yang tersedia dan pengantar dapat melihat daftar pesanan sesuai yang di
+                                pesan siswa, dan admin bisa melihat semua daftar yang ada di website.
                             </p>
 
                             {{-- <div class="position-relative mt-4">
@@ -169,7 +169,7 @@
 
                     <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                         <div class="why-box">
-                            <h3>Why Choose Yummy?</h3>
+                            <h3>Why Harus Memilih Pos?</h3>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
@@ -244,8 +244,8 @@
 
                     <div class="col-lg-3 col-md-6">
                         <div class="stats-item text-center w-100 h-100">
-                            <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1"
-                                class="purecounter"></span>
+                            <span data-purecounter-start="0" data-purecounter-end="1453"
+                                data-purecounter-duration="1" class="purecounter"></span>
                             <p>Hours Of Support</p>
                         </div>
                     </div><!-- End Stats Item -->
@@ -861,7 +861,8 @@
 
                 <div class="row gy-4">
 
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
+                        data-aos-delay="100">
                         <div class="chef-member">
                             <div class="member-img">
                                 <img src="assets/img/chefs/chefs-1.jpg" class="img-fluid" alt="">
@@ -881,7 +882,8 @@
                         </div>
                     </div><!-- End Chefs Member -->
 
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
+                        data-aos-delay="200">
                         <div class="chef-member">
                             <div class="member-img">
                                 <img src="assets/img/chefs/chefs-2.jpg" class="img-fluid" alt="">
@@ -901,7 +903,8 @@
                         </div>
                     </div><!-- End Chefs Member -->
 
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
+                        data-aos-delay="300">
                         <div class="chef-member">
                             <div class="member-img">
                                 <img src="assets/img/chefs/chefs-3.jpg" class="img-fluid" alt="">
@@ -927,45 +930,44 @@
         </section><!-- End Chefs Section -->
 
         <section id="book-a-table" class="book-a-table">
-    <div class="container" data-aos="fade-up">
-        <div class="section-header">
-            <h2>Buat Pesanan Baru</h2>
-            <p>Buat <span>Pesanan Anda</span> Bersama Kami</p>
-        </div>
+            <div class="container" data-aos="fade-up">
+                <div class="section-header">
+                    <h2>Buat Pesanan Baru</h2>
+                    <p>Buat <span>Pesanan Anda</span> Bersama Kami</p>
+                </div>
 
-        <div class="row g-0">
-            <div class="col-lg-4 reservation-img" style="background-image: url(assets/img/reservation.jpg);"
-                data-aos="zoom-out" data-aos-delay="200"></div>
+                <div class="row g-0">
+                    <div class="col-lg-4 reservation-img" style="background-image: url(assets/img/reservation.jpg);"
+                        data-aos="zoom-out" data-aos-delay="200"></div>
 
-            <div class="col-lg-8 d-flex align-items-center reservation-form-bg">
-                <form method="POST" action="{{ route('pesanans.store') }}" role="form"
-                    class="php-email-form" data-aos="fade-up" data-aos-delay="100">
-                    @csrf
-                    <div class="row gy-4">
-                        <div class="col-lg-4 col-md-6">
-                            <input type="number" name="jumlah_pesanan" class="form-control" id="jumlah_pesanan"
-                                placeholder="Jumlah Pesanan" required>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <input type="text" name="barang" class="form-control" id="barang"
-                                placeholder="Nama Barang" required>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <input type="number" name="harga" class="form-control" id="harga"
-                                placeholder="Harga" required>
-                        </div>
-                        <div class="col-lg-12 col-md-12">
-                            <textarea class="form-control" name="keterangan" rows="5"
-                                placeholder="Keterangan" required></textarea>
-                        </div>
+                    <div class="col-lg-8 d-flex align-items-center reservation-form-bg">
+                        <form method="POST" action="{{ route('pesanans.store') }}" role="form"
+                            class="php-email-form" data-aos="fade-up" data-aos-delay="100">
+                            @csrf
+                            <div class="row gy-4">
+                                <div class="col-lg-4 col-md-6">
+                                    <input type="number" name="jumlah_pesanan" class="form-control"
+                                        id="jumlah_pesanan" placeholder="Jumlah Pesanan" required>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <input type="text" name="barang" class="form-control" id="barang"
+                                        placeholder="Nama Barang" required>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <input type="number" name="harga" class="form-control" id="harga"
+                                        placeholder="Harga" required>
+                                </div>
+                                <div class="col-lg-12 col-md-12">
+                                    <textarea class="form-control" name="keterangan" rows="5" placeholder="Keterangan" required></textarea>
+                                </div>
 
-         @php
-         use App\Models\User;
-         $kurirs = User::where('type', 2)->get();
-         @endphp
+                                @php
+                                    use App\Models\User;
+                                    $kurirs = User::where('type', 2)->get();
+                                @endphp
 
-       
-                        <div class="form-group">
+
+                                <div class="form-group">
                                     <label for="kurir">Kurir</label>
                                     <select name="kurir" id="kurir" class="form-control" required>
                                         @foreach ($kurirs as $kurir)
@@ -973,20 +975,20 @@
                                         @endforeach
                                     </select>
                                 </div>
-                    <div class="form-group mt-3">
-                        <div class="mb-3">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Pesanan Anda telah dibuat. Terima kasih!</div>
-                        </div>
-                        <div class="text-center"><button type="submit">Buat Pesanan</button></div>
-                    </div>
-                </form>
-            </div><!-- End Reservation Form -->
-        </div>
-    </div>
-</section>
-<!-- End Book A Table Section -->
+                                <div class="form-group mt-3">
+                                    <div class="mb-3">
+                                        <div class="loading">Loading</div>
+                                        <div class="error-message"></div>
+                                        <div class="sent-message">Pesanan Anda telah dibuat. Terima kasih!</div>
+                                    </div>
+                                    <div class="text-center"><button type="submit">Buat Pesanan</button></div>
+                                </div>
+                        </form>
+                    </div><!-- End Reservation Form -->
+                </div>
+            </div>
+        </section>
+        <!-- End Book A Table Section -->
 
 
         <!-- ======= Gallery Section ======= -->
@@ -1092,31 +1094,7 @@
 
                 </div>
 
-                <form action="forms/contact.php" method="post" role="form" class="php-email-form p-3 p-md-4">
-                    <div class="row">
-                        <div class="col-xl-6 form-group">
-                            <input type="text" name="name" class="form-control" id="name"
-                                placeholder="Your Name" required>
-                        </div>
-                        <div class="col-xl-6 form-group">
-                            <input type="email" class="form-control" name="email" id="email"
-                                placeholder="Your Email" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
-                            required>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-                    </div>
-                    <div class="my-3">
-                        <div class="loading">Loading</div>
-                        <div class="error-message"></div>
-                        <div class="sent-message">Your message has been sent. Thank you!</div>
-                    </div>
-                    <div class="text-center"><button type="submit">Send Message</button></div>
-                </form><!--End Contact Form -->
+
 
             </div>
         </section><!-- End Contact Section -->
