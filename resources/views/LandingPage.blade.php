@@ -131,23 +131,24 @@
                     <div class="col-lg-5 d-flex align-items-end" data-aos="fade-up" data-aos-delay="300">
                         <div class="content ps-0 ps-lg-5">
                             <p class="fst-italic">
-                                Pesan online siswa adalah website untuk memudahkan Siswa membeli makanan dan minuman
-                                yang siswa pesan.
+                                Selamat datang di Pos - Pesan Online Siswa, tempat di mana pesanan makanan dan minuman
+                                Siswa menjadi lebih mudah!
                                 <br>
                             </p>
                             <ul>
-                                <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat.</li>
-                                <li><i class="bi bi-check2-all"></i> Duis aute irure dolor in reprehenderit in
-                                    voluptate velit.</li>
-                                <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat. Duis aute irure dolor in reprehenderit in voluptate trideta
-                                    storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+                                <li><i class="bi bi-check2-all"></i> Rasakan kemudahan dengan hanya beberapa klik untuk
+                                    pesan makanan favoritmu.</li>
+                                <li><i class="bi bi-check2-all"></i> Nikmati kepraktisan dengan layanan kami yang cepat
+                                    dan efisien.</li>
+                                <li><i class="bi bi-check2-all"></i> Temukan beragam pilihan lezat, dari hidangan klasik
+                                    hingga inovatif!</li>
                             </ul>
                             <p>
-                                Pesan online siswa juga menyediakan fitur fitur seperti siswa dapat melihat daftar
-                                makanan/minuman yang tersedia dan pengantar dapat melihat daftar pesanan sesuai yang di
-                                pesan siswa, dan admin bisa melihat semua daftar yang ada di website.
+                                Di Pos, kami tidak hanya menyederhanakan proses pesanan, tetapi juga memberikan
+                                pengalaman yang lengkap. Jelajahi
+                                daftar makanan/minuman kami, saksikan pengantar kami menyiapkan pesanan Anda, dan
+                                ketahui bahwa admin kami selalu
+                                siap membantu. Selamat menikmati layanan terbaik di Pesan Online Siswa!
                             </p>
 
                             {{-- <div class="position-relative mt-4">
@@ -169,15 +170,15 @@
 
                     <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                         <div class="why-box">
-                            <h3>Why Harus Memilih Pos?</h3>
+                            <h3>Kenapa Harus Pilih Pos - Pesan Online Siswa?</h3>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                                Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus
-                                optio ad corporis.
+                                Pos - Pesan Online Siswa bukan hanya sekadar tempat pesan makanan biasa. Kami hadir
+                                untuk membuat pengalaman
+                                pesan makananmu jadi lebih seru dan mudah. Kenapa harus pilih Pos? Ini dia
+                                keuntungan-keuntungannya:
                             </p>
                             <div class="text-center">
-                                <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+                                <a href="#" class="more-btn">Lebih Lanjut <i class="bx bx-chevron-right"></i></a>
                             </div>
                         </div>
                     </div><!-- End Why Box -->
@@ -188,34 +189,36 @@
                             <div class="col-xl-4" data-aos="fade-up" data-aos-delay="200">
                                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
                                     <i class="bi bi-clipboard-data"></i>
-                                    <h4>Corporis voluptates officia eiusmod</h4>
-                                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut
-                                        aliquip</p>
+                                    <h4>Pesanan Tersimpan dengan Aman</h4>
+                                    <p>Informasi pesananmu aman di sini. Kami mengutamakan keamanan data dan privasi
+                                        pengguna.</p>
                                 </div>
                             </div><!-- End Icon Box -->
 
                             <div class="col-xl-4" data-aos="fade-up" data-aos-delay="300">
                                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
                                     <i class="bi bi-gem"></i>
-                                    <h4>Ullamco laboris ladore pan</h4>
-                                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                        deserunt</p>
+                                    <h4>Pilihan Makanan Luar Biasa</h4>
+                                    <p>Dengan beragam pilihan makanan dan minuman, setiap pesananmu menjadi pengalaman
+                                        kuliner yang luar
+                                        biasa.</p>
                                 </div>
                             </div><!-- End Icon Box -->
 
                             <div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
                                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
                                     <i class="bi bi-inboxes"></i>
-                                    <h4>Labore consequatur incidid dolore</h4>
-                                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere
-                                    </p>
+                                    <h4>Proses Pesanan Cepat dan Mudah</h4>
+                                    <p>Proses pesanan yang cepat dan mudah, membuatmu bisa menikmati makanan favoritmu
+                                        tanpa repot.</p>
                                 </div>
                             </div><!-- End Icon Box -->
 
                         </div>
                     </div>
-
                 </div>
+
+            </div>
 
             </div>
         </section><!-- End Why Us Section -->
@@ -793,10 +796,13 @@
                                 </div>
                             </div>
                         </div><!-- End testimonial item -->
-
                     </div>
-                    <div class="swiper-pagination"></div>
                 </div>
+
+
+            </div>
+            <div class="swiper-pagination"></div>
+            </div>
 
             </div>
         </section><!-- End Testimonials Section -->
