@@ -2,9 +2,6 @@
 
 @section('content')
 
-
-
-
         <!-- ======= Menu Section ======= -->
         <section id="menu" class="menu">
             <div class="container" data-aos="fade-up">
@@ -12,7 +9,7 @@
                 <div class="section-header">
                     <a href="#" id="showReservationForm" class="btn btn-success mt-5">Custom Pesanan</a>
                     {{-- <a href="{{ route('pesanans.create') }}" > Custom Pesanan</a> --}}
-                
+
                     <section id="book-a-table" class="book-a-table" style="display: none;">
                         <form method="POST" action="{{ route('pesanans.store') }}" data-aos="fade-up" data-aos-delay="100">
                             @csrf
@@ -31,12 +28,12 @@
                                 <div class="col-lg-12 col-md-12">
                                     <textarea class="form-control" name="keterangan" rows="5" placeholder="Keterangan" required></textarea>
                                 </div>
-                
+
                                 @php
                                     use App\Models\User;
                                     $kurirs = User::where('type', 2)->get();
                                 @endphp
-                
+
                                 <div class="form-group">
                                     <label for="kurir">Kurir</label>
                                     <select name="kurir" id="kurir" class="form-control" required>
@@ -60,11 +57,11 @@
                             </div>
                         </form>
                     </section>
-                
+
                     <h2>Our Menu</h2>
                     <p>Check Our <span>Yummy Menu</span></p>
                 </div>
-                
+
                 <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
 
                     <li class="nav-item">
@@ -115,13 +112,13 @@
                                 </p>
                             </div><!-- Menu Item -->
 
-                          
+
                             @empty
                             <div class="alert alert-danger">
                                 Data Post belum Tersedia.
                             </div>
                         @endforelse
-                
+
                         </div>
                     </div><!-- End Starter Menu Content -->
 
@@ -405,26 +402,26 @@
                 // Menangkap elemen-elemen yang diperlukan
                 var reservationSection = document.getElementById("book-a-table");
                 var showReservationButton = document.getElementById("showReservationForm");
-        
+
                 // Menambahkan status tersembunyi pada elemen <section>
                 var isReservationVisible = false;
-        
+
                 // Menambahkan event listener pada tombol
                 showReservationButton.addEventListener("click", function (event) {
                     // Mencegah perilaku default dari tautan
                     event.preventDefault();
-        
+
                     // Toggle antara terlihat dan tersembunyi
                     if (isReservationVisible) {
                         reservationSection.style.display = "none";
                     } else {
                         reservationSection.style.display = "block";
                     }
-        
+
                     // Mengubah status
                     isReservationVisible = !isReservationVisible;
                 });
             });
         </script>
-        
+
 @endsection

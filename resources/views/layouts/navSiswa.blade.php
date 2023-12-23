@@ -34,6 +34,7 @@
     <link href="assets/css/main.css" rel="stylesheet">
     <link href="{{ asset('style.css') }}" rel="stylesheet">
     <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
     <!-- ... -->
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])

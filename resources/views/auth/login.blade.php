@@ -1,260 +1,406 @@
 @extends('layouts.app')
 
 @section('content')
-    <style>
-        .login-page {
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: #7C53AF;
+<style>
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #7d2ae8;
+  padding: 30px;
+}
+.container{
+  position: relative;
+  max-width: 850px;
+  width: 100%;
+  background: #fff;
+  padding: 40px 30px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  perspective: 2700px;
+}
+.container .cover{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 50%;
+  z-index: 98;
+  transition: all 1s ease;
+  transform-origin: left;
+  transform-style: preserve-3d;
+}
+.container #flip:checked ~ .cover{
+  transform: rotateY(-180deg);
+}
+ .container .cover .front,
+ .container .cover .back{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.cover .back{
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+.container .cover::before,
+.container .cover::after{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #7d2ae8;
+  opacity: 0.5;
+  z-index: 12;
+}
+.container .cover::after{
+  opacity: 0.3;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+.container .cover img{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 10;
+}
+.container .cover .text{
+  position: absolute;
+  z-index: 130;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cover .text .text-1,
+.cover .text .text-2{
+  font-size: 26px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+.cover .text .text-2{
+  font-size: 15px;
+  font-weight: 500;
+}
+.container .forms{
+  height: 100%;
+  width: 100%;
+  background: #fff;
+}
+.container .form-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-content .login-form,
+.form-content .signup-form{
+  width: calc(100% / 2 - 25px);
+}
+.forms .form-content .title{
+  position: relative;
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+}
+.forms .form-content .title:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 25px;
+  background: #7d2ae8;
+}
+.forms .signup-form  .title:before{
+  width: 20px;
+}
+.forms .form-content .input-boxes{
+  margin-top: 30px;
+}
+.forms .form-content .input-box{
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  margin: 10px 0;
+  position: relative;
+}
+.form-content .input-box input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0 30px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+.form-content .input-box input:focus,
+.form-content .input-box input:valid{
+  border-color: #7d2ae8;
+}
+.form-content .input-box i{
+  position: absolute;
+  color: #7d2ae8;
+  font-size: 17px;
+}
+.forms .form-content .text{
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+.forms .form-content .text a{
+  text-decoration: none;
+}
+.forms .form-content .text a:hover{
+  text-decoration: underline;
+}
+.forms .form-content .button{
+  color: #fff;
+  margin-top: 40px;
+}
+.forms .form-content .button input{
+  color: #fff;
+  background: #7d2ae8;
+  border-radius: 6px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.forms .form-content .button input:hover{
+  background: #5b13b9;
+}
+.forms .form-content label{
+  color: #5b13b9;
+  cursor: pointer;
+}
+.forms .form-content label:hover{
+  text-decoration: underline;
+}
+.forms .form-content .login-text,
+.forms .form-content .sign-up-text{
+  text-align: center;
+  margin-top: 25px;
+}
+.container #flip{
+  display: none;
+}
+@media (max-width: 730px) {
+  .container .cover{
+    display: none;
+  }
+  .form-content .login-form,
+  .form-content .signup-form{
+    width: 100%;
+  }
+  .form-content .signup-form{
+    display: none;
+  }
+  .container #flip:checked ~ .forms .signup-form{
+    display: block;
+  }
+  .container #flip:checked ~ .forms .login-form{
+    display: none;
+  }
+}
 
-        }
 
-        .parent-login {
-            width: 70%;
-            height: 80%;
-            margin: 80px auto;
-            background-color: #fff;
-            overflow: auto;
-            box-sizing: border-box;
-            border-radius: 30px;
-            -webkit-border-radius: 30px;
-            -moz-border-radius: 30px;
-            -ms-border-radius: 30px;
-            -o-border-radius: 30px;
-        }
+.eye-icon {
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        transform: translateY(-60%);
+        cursor: pointer;
+    }
 
-        .image-child-login {
-            width: 50%;
-            height: 100%;
-            float: left;
-
-        }
-
-        .image-login {
-            width: 400px;
-            height: 400px;
-            margin: 50px auto;
-        }
-
-        .pos-login {
-            display: flex;
-            align-items: center;
-            margin-left: 15%;
-            margin-top: 50px;
-        }
-
-        .pos-login h2 {
-            margin-left: 10px;
-            font-size: 40px;
-        }
-
-        .pos-login a {
-            text-decoration: none;
-        }
-
-        .content-child-login {
-            width: 50%;
-            height: 100%;
-            float: right;
-
-        }
-
-        .login-form {
-
-            width: 95%;
-            height: 60%;
-            margin-top: 25%;
-            margin-left: 20px;
-        }
-
-        .content-child-login p {
-
-            margin-top: 46px;
-            font-size: 40px;
-            color: #7C53AF;
-            text-align: left;
-            margin-bottom: 20px;
-        }
-
-        /* .input-login {
-                                            display: flex;
-                                            flex-direction: column;
-                                            align-items: center;
-                                            }
-                                            */
-        .input-login input {
-            width: 80%;
-            height: 75px;
-            border-radius: 5px;
-            font-size: 20px;
-            padding-left: 20px;
-
-            margin-bottom: 20px;
-            border: 1px solid rgba(0, 0, 0, 0.50);
-            -webkit-border-radius: 5px;
-            -moz-border-radius: 5px;
-            -ms-border-radius: 5px;
-            -o-border-radius: 5px;
-        }
-
-        .content-child-login button {
-            margin-top: 30px;
-            width: 80%;
-            height: 50px;
-            color: white;
-            background-color: #593FA2;
-            font-size: 20px;
-            text-decoration: none;
-            cursor: pointer;
-            border-radius: 5px;
-            -webkit-border-radius: 5px;
-            -moz-border-radius: 5px;
-            -ms-border-radius: 5px;
-            -o-border-radius: 5px;
-            /*box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-                                            */
-        }
-    </style>
-
-    {{-- <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">{{ __('Login') }}</div>
-
-                    <div class="card-body">
-                        <form method="POST" action="{{ route('login') }}">
-                            @csrf
-
-                            <div class="row mb-3">
-                                <label for="email"
-                                    class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
-
-                                <div class="col-md-6">
-                                    <input id="email" type="email"
-                                        class="form-control @error('email') is-invalid @enderror" name="email"
-                                        value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                    @error('email')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                            </div>
-
-                            <div class="row mb-3">
-                                <label for="password"
-                                    class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
-
-                                <div class="col-md-6">
-                                    <input id="password" type="password"
-                                        class="form-control @error('password') is-invalid @enderror" name="password"
-                                        required autocomplete="current-password">
-
-                                    @error('password')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                            </div>
-
-                            <div class="row mb-3">
-                                <div class="col-md-6 offset-md-4">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="remember" id="remember"
-                                            {{ old('remember') ? 'checked' : '' }}>
-
-                                        <label class="form-check-label" for="remember">
-                                            {{ __('Remember Me') }}
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row mb-0">
-                                <div class="col-md-8 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
-                                        {{ __('Login') }}
-                                    </button>
-
-                                    @if (Route::has('password.request'))
-                                        <a class="btn btn-link" href="{{ route('password.request') }}">
-                                            {{ __('Forgot Your Password?') }}
-                                        </a>
-                                    @endif
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+</style>
+<div class="container">
+    <input type="checkbox" id="flip">
+    <div class="cover">
+        <div class="front">
+            <img src="{{asset('assets/img/frontImg.jpg')}}" alt="">
+            <div class="text">
+                <span class="text-1">Ayoo gabung dan rasakan  <br>kemudahan menggunakan POS</span>
+                <span class="text-2">Ayo Gabung</span>
             </div>
         </div>
-    </div> --}}
-    <main>
-        <section class="login-page">
-            <div class="parent-login">
-                <div class="image-child-login">
-                    <div class="pos-login">
-                        <img src="assets/image/logo_pos.png" alt="">
-                        <h2 style="color: #593FA2"> <a href="">POS</a></h2>
-                    </div>
-                    <div class="image-login">
-                        <img src="{{ asset('assets/img/login.png') }}"alt="" width="100% " height="100%">
-                    </div>
-                </div>
-                <div class="content-child-login">
-                    <div class="login-form">
-
-                        <p>Selamat Datang</p>
-                        <form method="POST" action="{{ route('login') }}">
-                            @csrf
-
-                            <div class="input-login">
-                                <input id="email" type="email"
-                                    class="form-control @error('email') is-invalid @enderror input-two" name="email"
-                                    value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-
-                            <div class="input-login">
-                                <input id="password" type="password"
-                                    class="form-control @error('password') is-invalid @enderror input-two" name="password"
-                                    required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    style="right: 8%; position: relative; top: 12px; transform: translateY(-50%);">
-                                    <!-- Your SVG path here -->
-                                </svg>
-                            </div>
-
-                            <button type="submit" class="btn-login">{{ __('Login') }}</button>
-                        </form>
-
-                    </div>
-                </div>
+        <div class="back">
+            <img class="backImg" src="{{asset('assets/img/backImg.jpg')}}" alt="">
+            <div class="text">
+                <span class="text-1">Selesaikan perjalanan <br> dengan satu langkah</span>
+                <span class="text-2">Ayo mulai</span>
             </div>
-            {{-- <footer>
-                <h2 class="title-sponsor" style="color: white;">Dibawah naungan:</h2>
-                <div class="sponsor" style="margin-top: 10px;">
-                    <img src="assets/image/Ellipse_32-removebg-preview.png" alt="">
-                    <h2 style="color: white; margin-left: 5px;  ">SMK Prakarya Internasional</h2>
-                </div>
-            </footer> --}}
-        </section>
-    </main>
+        </div>
+    </div>
+    <div class="forms">
+        <div class="form-content">
+            <div class="login-form">
+                <div class="title">Login</div>
+                <form method="POST" action="{{ route('login') }}">
+                    @csrf
+                    <div class="input-boxes">
+                        <div class="input-box">
+                            <i class="fas fa-envelope"></i>
+                            <input id="email" type="email" placeholder="Masukkan email Anda" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                            @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-lock"></i>
+                            <div class="eye-icon">
+
+                                <i class="toggle-password fas fa-eye" onclick="togglePasswordVisibility(this)"></i>
+                            </div>
+                            <input id="password" type="password" placeholder="Masukkan kata sandi Anda" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                            @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+
+                        </div>
+                        <div class="text"><a href="#">Lupa kata sandi?</a></div>
+                        <div class="button input-box">
+                            <input type="submit" value="Sumbit" />
+                        </div>
+                        {{-- <div class="button input-box">
+
+                            <button type="submit" >
+                                {{ __('Login') }}
+                            </button>
+                        </div> --}}
+                        <div class="text sign-up-text">Belum punya akun? <label for="flip">Daftar sekarang</label></div>
+                    </div>
+                </form>
+
+                <script>
+                    function togglePasswordVisibility(icon) {
+                        var passwordField = document.getElementById('password');
+                        var fieldType = passwordField.getAttribute('type');
+
+                        if (fieldType === 'password') {
+                            passwordField.setAttribute('type', 'text');
+                            icon.classList.remove('fa-eye');
+                            icon.classList.add('fa-eye-slash');
+                        } else {
+                            passwordField.setAttribute('type', 'password');
+                            icon.classList.remove('fa-eye-slash');
+                            icon.classList.add('fa-eye');
+                        }
+                    }
+                </script>
+
+            </div>
+            <div class="signup-form">
+                <div class="title">Signup</div>
+                <form method="POST" action="{{ route('register') }}">
+                    @csrf
+                    <div class="input-boxes">
+                        <div class="input-box">
+                            <i class="fas fa-user"></i>
+                            <input id="name" type="text" placeholder="Enter your name" required
+                                class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}"
+                                autocomplete="name" autofocus>
+                            @error('name')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                         <!-- Tambahkan input untuk 'kelas' -->
+                         <div class="input-box">
+                            <i class="fas fa-user"></i>
+                            <input id="kelas" type="text" placeholder="Enter your class" required
+                                class="form-control @error('kelas') is-invalid @enderror" name="kelas" value="{{ old('kelas') }}"
+                                autocomplete="kelas" autofocus>
+                            @error('kelas')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <!-- Tambahkan input untuk 'jk' -->
+                        <div class="input-box">
+                            <i class="fas fa-user"></i>
+                            <input id="jk" type="text" placeholder="Enter your gender" required
+                                class="form-control @error('jk') is-invalid @enderror" name="jk" value="{{ old('jk') }}"
+                                autocomplete="jk" autofocus>
+                            @error('jk')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-envelope"></i>
+                            <input id="email" type="text" placeholder="Enter your email" required
+                                class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}"
+                                autocomplete="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Enter a valid email address">
+                            @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+
+
+                        <div class="input-box">
+                            <i class="fas fa-lock"></i>
+                            <input id="password" type="password" placeholder="Enter your password (min. 8 characters)" required
+                                class="form-control @error('password') is-invalid @enderror" name="password"
+                                autocomplete="new-password" pattern=".{8,}" title="Password must be at least 8 characters long.">
+                            @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+
+                        <div class="input-box">
+                            <i class="fas fa-lock"></i>
+                            <input id="password-confirm" type="password" placeholder="Confirm your password" required
+                                class="form-control" name="password_confirmation" autocomplete="new-password">
+                            <span id="password-match" class="invalid-feedback" role="alert" style="display: none;">
+                                <strong>Passwords do not match.</strong>
+                            </span>
+                        </div>
+
+
+                        {{-- <div class="button input-box">
+                            <input type="submit" value="Submit">
+                        </div> --}}
+                        <button type="submit" class="btn btn-primary">
+                            {{ __('Login') }}
+                        </button>
+                        <div class="text sign-up-text">
+                            Already have an account? <label for="flip">Login now</label>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
 @endsection
