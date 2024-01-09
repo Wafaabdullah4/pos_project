@@ -19,12 +19,12 @@ return new class extends Migration
             $table->integer('harga');
             $table->string('keterangan');
             $table->unsignedBigInteger('kurir');
-            $table->unsignedBigInteger('menu');
+
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('kurir')->references('id')->on('users')->onDelete('cascade'); // Set NULL for Kurir
-            $table->foreign('menu')->references('id')->on('menus')->onDelete('cascade'); 
+
         });
     }
 
@@ -35,4 +35,4 @@ return new class extends Migration
     {
         Schema::dropIfExists('pesanans');
     }
-};  
+};

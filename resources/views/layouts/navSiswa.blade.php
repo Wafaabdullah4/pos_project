@@ -9,6 +9,7 @@
     <meta content="" name="description">
     <meta content="" name="keywords">
 
+
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -31,7 +32,7 @@
     <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
     <link href="{{ asset('style.css') }}" rel="stylesheet">
     <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
@@ -67,13 +68,15 @@
 
             <nav id="navbar" class="navbar ">
                 <ul>
-                    <li><a href="home" style="text-decoration: none">Menu</a></li>
+                    <li><a href="home" style="text-decoration: none">Custom</a></li>
+                    <li><a href="{{ url('menus') }}" style="text-decoration: none">Menu</a></li>
+                    <li><a href="{{ url('orders') }}" style="text-decoration: none">Orders</a></li>
                     {{-- <li> <a href="{{route('pesanans.create') }}" style="text-decoration: none">Pesan</a></li> --}}
                     <li type="button" class="  position-relative">
                         <a href="{{ url('myorder') }}" style="text-decoration: none">Pesanan Saya</a>
 
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill "
-                            style="background-color: #593FA2; text-decoration: none"">
+                            style="background-color: #593FA2; text-decoration: none">
                             {{ $jumlahPesanan }}
                         </span>
                     </li>
@@ -110,11 +113,17 @@
         </div>
     </header><!-- End Header -->
 
+    {{-- Header --}}
+
+
+    {{-- End Header --}}
+
+
     <main class="py-4">
         @yield('content')
     </main>
     <!-- ======= Footer ======= -->
-    <footer id="footer" class="footer mt-5">
+    <footer id="footer" class="footer">
 
         <div class="container">
             <div class="row gy-3">
@@ -182,6 +191,7 @@
     <!-- End Footer -->
 
 
+
     <!-- End Footer -->
 
     <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
@@ -190,7 +200,7 @@
     <div id="preloader"></div>
 
     <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/aos/aos.js') }}"></script>
     <script src="{{ asset('assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>

@@ -312,7 +312,27 @@
                         </div>
 
                         <div class="row gy-5">
+                            {{-- @forelse ($menus as $data)
+                        <div class="row gy-5">
 
+                            <div class="col-lg-4 menu-item">
+                                <a href="assets/img/menu/menu-item-1.png" class="glightbox">
+                                    <img src="{{ asset('/storage/menu/'.$data->image) }}" class="menu-img img-fluid" ></a>
+                                <h4>{{$data->nama_makanan}}</h4>
+                                <p class="ingredients">
+                            {{$data ->content}}
+                                </p>
+                                <p class="price">
+                                   RP {{$data ->harga}}
+                                </p>
+                            </div><!-- Menu Item -->
+
+
+                            @empty
+                            <div class="alert alert-danger">
+                                Data Post belum Tersedia.
+                            </div>
+                        @endforelse --}}
                             <div class="col-lg-4 menu-item">
                                 <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img
                                         src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid"
@@ -926,12 +946,15 @@
 
                 <div class="section-header">
                     <h2>Alamat</h2>
-                    <p>Alamat  <span>Kami</span></p>
+                    <p>Alamat <span>Kami</span></p>
                 </div>
 
                 <div class="mb-3">
 
-                        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.5824162535546!2d107.60043487379109!3d-6.940406167938559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e896b761be29%3A0xfbb02c57fdf67d1f!2sSMK%20Prakarya%20Internasional!5e0!3m2!1sid!2sid!4v1703315846860!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe style="border:0; width: 100%; height: 350px;"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.5824162535546!2d107.60043487379109!3d-6.940406167938559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e896b761be29%3A0xfbb02c57fdf67d1f!2sSMK%20Prakarya%20Internasional!5e0!3m2!1sid!2sid!4v1703315846860!5m2!1sid!2sid"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div><!-- End Google Maps -->
 
                 <div class="row gy-4">
@@ -943,7 +966,8 @@
                                 <h3>Alamat Kami</h3>
                                 <p>
                                     SMK Prakarya Internasional
-                                    Jl. Inhoftank No.46-146, Pelindung Hewan, Kec. Astanaanyar, Kota Bandung, Jawa Barat 40243</p>
+                                    Jl. Inhoftank No.46-146, Pelindung Hewan, Kec. Astanaanyar, Kota Bandung, Jawa Barat
+                                    40243</p>
                             </div>
                         </div>
                     </div><!-- End Info Item -->

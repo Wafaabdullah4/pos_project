@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-   <link rel="stylesheet" href="{{asset('style.css')}}">
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
@@ -29,6 +29,10 @@
                 <a class="navbar-brand" href="{{ url('kurirorder') }}">
                     Pesanan
                 </a>
+                <a class="navbar-brand" href="{{ route('kurirorders.show') }}">
+                    Order
+                </a>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

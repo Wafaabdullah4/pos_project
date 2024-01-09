@@ -16,7 +16,8 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->string('nama_makanan')->nullable();
             $table->string('kelas')->nullable();
-            $table->string('harga')->nullable();
+            $table->decimal('harga', 8, 2);
+            $table->integer('stock');
             $table->string('jenis')->nullable();
             $table->text('content')->nullable();
 

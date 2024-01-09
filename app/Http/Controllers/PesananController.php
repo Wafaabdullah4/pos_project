@@ -30,7 +30,7 @@ class PesananController extends Controller
             'harga' => 'required|numeric',
             'keterangan' => 'required|string',
             'kurir' => 'required|string',
-            'menu' => 'required|string',
+
         ]);
 
         $user = auth()->user();
@@ -41,7 +41,7 @@ class PesananController extends Controller
             'harga' => $request->input('harga'),
             'keterangan' => $request->input('keterangan'),
             'kurir' => $request->input('kurir'),
-            'menu' => $request->input('menu'),
+
         ]);
 
         $user->pesanans()->save($pesanan);
@@ -106,5 +106,4 @@ class PesananController extends Controller
 
         return view('kurirOrder.index', compact('pesanans'));
     }
-
 }
