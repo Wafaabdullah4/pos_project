@@ -18,7 +18,7 @@ class CreateUsersSeeder extends Seeder
         $users = [
             [
                 'name' => 'Admin User',
-                'kelas' => '',
+                'kelas' => '-',
                 'jk' => 'Laki-Laki',
                 'email' => 'admin@gmail.com',
                 'type' => 1,
@@ -32,14 +32,7 @@ class CreateUsersSeeder extends Seeder
                 'type' => 2,
                 'password' => bcrypt('awaysha123'),
             ],
-            [
-                'name' => 'Muhammad Rafli',
-                'kelas' => 'XII Rekayasa Perangkat Lunak',
-                'jk' => 'Laki-Laki',
-                'email' => 'Rafli@gmail.com',
-                'type' => 0,
-                'password' => bcrypt('rafli123'),
-            ],
+
         ];
 
         foreach ($users as $key => $user) {

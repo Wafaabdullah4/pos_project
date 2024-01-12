@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -34,7 +35,11 @@ class HomeController extends Controller
      */
     public function adminHome(): View
     {
-        return view('adminHome');
+        $admin = User::where('type', '1');
+        $siswa = User::where('type', '0');
+        $kurir = User::where('type', '2');
+
+        return view('adminHome', compact('admin', 'siswa', 'kurir'));
     }
 
     /**
