@@ -4,6 +4,21 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        footer {
+            margin-top: auto;
+        }
+    </style>
 
     <title>Pesan Online SMK PI</title>
     <meta content="" name="description">
@@ -119,10 +134,11 @@
     {{-- End Header --}}
 
 
-    <main class="py-4">
+    <main class="py-4 min-h-screen">
         @yield('content')
     </main>
     <!-- ======= Footer ======= -->
+    <div></div>
     <footer id="footer" class="footer">
 
         <div class="container">

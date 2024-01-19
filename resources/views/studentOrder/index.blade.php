@@ -5,13 +5,13 @@
     <div class="bg-dark">
 
     </div>
-    <table class="table mt-5">
+    <table class="table mt-5" style="margin-top: 100px">
         <div class="tabular--wrapper">
             <div class="table-container">
                 <table>
                     <thead>
                         <tr>
-                            <th>ID</th>
+                            <th>No</th>
                             <th>Name</th>
                             <th>Jumlah Pesanan</th>
                             <th>Barang</th>

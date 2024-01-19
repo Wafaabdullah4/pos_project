@@ -26,7 +26,7 @@
                             <td>{{ $order->quantity }}</td>
                             <td>Rp{{ number_format($order->total_harga, 2) }}</td>
                             <td>{{ \App\Models\User::find($order->kurir_id)->name }}
-                            <td>{{ $order->created_at->format('d-m-Y H:i:s') }}</td>
+                                <td>{{ $order->created_at->setTimezone('Asia/Jakarta')->format('j F Y \p\u\k\u\l H:i') }}</td>
                             <td>
                                 {{-- <a href="{{ route('pesanans.show', $data->id) }}" class="btn btn-info">View</a> --}}
                                 {{-- <a href="{{ route('pesanans.edit', $data->id) }}" class="btn btn-primary">Edit</a> --}}

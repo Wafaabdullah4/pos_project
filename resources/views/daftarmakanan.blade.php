@@ -7,7 +7,7 @@
 
 
 
-            <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            {{-- <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
 
                 <li class="nav-item">
                     <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#menu-starters">
@@ -32,7 +32,7 @@
                     </a>
                 </li><!-- End tab nav item -->
 
-            </ul>
+            </ul> --}}
 
             <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
 
@@ -40,7 +40,7 @@
 
                     <div class="tab-header text-center">
                         <p>Menu</p>
-                        <h3>Starters</h3>
+                        <h3>Menu Kami</h3>
                     </div>
                     <div class="row gy-5">
                         @forelse ($menus as $data)

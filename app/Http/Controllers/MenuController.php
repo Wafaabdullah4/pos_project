@@ -141,7 +141,7 @@ class MenuController extends Controller
         }
 
         //redirect to index
-        return redirect()->route('menu.index')->with(['success' => 'Data Berhasil Disimpan!']);
+        return redirect()->route('menus.index')->with(['success' => 'Data Berhasil Disimpan!']);
     }
 
     public function destroy(menu $menu)
