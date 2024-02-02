@@ -231,25 +231,9 @@
 
                     <div class="col-lg-3 col-md-6">
                         <div class="stats-item text-center w-100 h-100">
-                            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
+                            <span data-purecounter-start="0" data-purecounter-end="11" data-purecounter-duration="1"
                                 class="purecounter"></span>
-                            <p>Clients</p>
-                        </div>
-                    </div><!-- End Stats Item -->
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="stats-item text-center w-100 h-100">
-                            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
-                                class="purecounter"></span>
-                            <p>Projects</p>
-                        </div>
-                    </div><!-- End Stats Item -->
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="stats-item text-center w-100 h-100">
-                            <span data-purecounter-start="0" data-purecounter-end="1453"
-                                data-purecounter-duration="1" class="purecounter"></span>
-                            <p>Hours Of Support</p>
+                            <p>Jurusan</p>
                         </div>
                     </div><!-- End Stats Item -->
 
@@ -257,7 +241,23 @@
                         <div class="stats-item text-center w-100 h-100">
                             <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1"
                                 class="purecounter"></span>
-                            <p>Workers</p>
+                            <p>Menu</p>
+                        </div>
+                    </div><!-- End Stats Item -->
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stats-item text-center w-100 h-100">
+                            <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1"
+                                class="purecounter"></span>
+                            <p>Kurir</p>
+                        </div>
+                    </div><!-- End Stats Item -->
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stats-item text-center w-100 h-100">
+                            <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1"
+                                class="purecounter"></span>
+                            <p>Partner</p>
                         </div>
                     </div><!-- End Stats Item -->
 
@@ -271,32 +271,32 @@
             <div class="container" data-aos="fade-up">
 
                 <div class="section-header">
-                    <h2>Our Menu</h2>
-                    <p>Check Our <span>Yummy Menu</span></p>
+                    <h2>Menu</h2>
+                    <p>Berbagai Menu <span>Yang Tersedia</span></p>
                 </div>
 
                 <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
 
                     <li class="nav-item">
                         <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#menu-starters">
-                            <h4>Starters</h4>
+                            <h4>Menu Kami</h4>
                         </a>
                     </li><!-- End tab nav item -->
 
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-breakfast">
-                            <h4>Breakfast</h4>
+                            <h4>Makanan</h4>
                         </a><!-- End tab nav item -->
 
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-lunch">
-                            <h4>Lunch</h4>
+                            <h4>Minuman</h4>
                         </a>
                     </li><!-- End tab nav item -->
 
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-dinner">
-                            <h4>Dinner</h4>
+                            <h4>Snack</h4>
                         </a>
                     </li><!-- End tab nav item -->
 
@@ -337,12 +337,12 @@
                                 <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img
                                         src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid"
                                         alt=""></a>
-                                <h4>Magnam Tiste</h4>
+                                <h4>Tahu Gejrot</h4>
                                 <p class="ingredients">
-                                    Lorem, deren, trataro, filede, nerada
+                                    Tahu,Sambal(optional),Bumbu Penyedap
                                 </p>
                                 <p class="price">
-                                    $5.95
+                                    Rp.7.000
                                 </p>
                             </div><!-- Menu Item -->
 
@@ -350,12 +350,12 @@
                                 <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img
                                         src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid"
                                         alt=""></a>
-                                <h4>Aut Luia</h4>
+                                <h4>Lumpia basah/kering</h4>
                                 <p class="ingredients">
-                                    Lorem, deren, trataro, filede, nerada
+                                    Lumpia,Gula Merah,Kecambah,Bumbu Penyedap
                                 </p>
                                 <p class="price">
-                                    $14.95
+                                    Rp.7.000
                                 </p>
                             </div><!-- Menu Item -->
 
@@ -363,12 +363,12 @@
                                 <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img
                                         src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid"
                                         alt=""></a>
-                                <h4>Est Eligendi</h4>
+                                <h4>Kuetiaw</h4>
                                 <p class="ingredients">
-                                    Lorem, deren, trataro, filede, nerada
+                                    kuetiaw, sambal, sayur, bumbu Penyedap
                                 </p>
                                 <p class="price">
-                                    $8.95
+                                    Rp.10.000
                                 </p>
                             </div><!-- Menu Item -->
 
@@ -376,12 +376,12 @@
                                 <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img
                                         src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid"
                                         alt=""></a>
-                                <h4>Eos Luibusdam</h4>
+                                <h4>Salad</h4>
                                 <p class="ingredients">
-                                    Lorem, deren, trataro, filede, nerada
+                                    Sayur segar,mayo(optional)
                                 </p>
                                 <p class="price">
-                                    $12.95
+                                    Rp.5.000
                                 </p>
                             </div><!-- Menu Item -->
 
@@ -389,12 +389,12 @@
                                 <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img
                                         src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid"
                                         alt=""></a>
-                                <h4>Eos Luibusdam</h4>
+                                <h4>Ayam Krispi</h4>
                                 <p class="ingredients">
-                                    Lorem, deren, trataro, filede, nerada
+                                    Ayam,nasi
                                 </p>
                                 <p class="price">
-                                    $12.95
+                                    Rp.12.000
                                 </p>
                             </div><!-- Menu Item -->
 
@@ -402,12 +402,12 @@
                                 <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img
                                         src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid"
                                         alt=""></a>
-                                <h4>Laboriosam Direva</h4>
+                                <h4>Lalapan</h4>
                                 <p class="ingredients">
-                                    Lorem, deren, trataro, filede, nerada
+                                    Sayur Segar
                                 </p>
                                 <p class="price">
-                                    $9.95
+                                    Rp.2.000
                                 </p>
                             </div><!-- Menu Item -->
 
@@ -427,12 +427,12 @@
                                 <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img
                                         src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid"
                                         alt=""></a>
-                                <h4>Magnam Tiste</h4>
+                                <h4>Tahu Gejot</h4>
                                 <p class="ingredients">
                                     Lorem, deren, trataro, filede, nerada
                                 </p>
                                 <p class="price">
-                                    $5.95
+                                    Rp.5.000
                                 </p>
                             </div><!-- Menu Item -->
 
@@ -440,12 +440,12 @@
                                 <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img
                                         src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid"
                                         alt=""></a>
-                                <h4>Aut Luia</h4>
+                                <h4>Lumpia basah/kering</h4>
                                 <p class="ingredients">
                                     Lorem, deren, trataro, filede, nerada
                                 </p>
                                 <p class="price">
-                                    $14.95
+                                    Rp.7.000
                                 </p>
                             </div><!-- Menu Item -->
 
@@ -453,12 +453,12 @@
                                 <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img
                                         src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid"
                                         alt=""></a>
-                                <h4>Est Eligendi</h4>
+                                <h4>Kuetiaw</h4>
                                 <p class="ingredients">
                                     Lorem, deren, trataro, filede, nerada
                                 </p>
                                 <p class="price">
-                                    $8.95
+                                    Rp.7.000
                                 </p>
                             </div><!-- Menu Item -->
 
@@ -466,12 +466,12 @@
                                 <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img
                                         src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid"
                                         alt=""></a>
-                                <h4>Eos Luibusdam</h4>
+                                <h4>Salad</h4>
                                 <p class="ingredients">
                                     Lorem, deren, trataro, filede, nerada
                                 </p>
                                 <p class="price">
-                                    $12.95
+                                    Rp.5.000
                                 </p>
                             </div><!-- Menu Item -->
 
@@ -479,12 +479,12 @@
                                 <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img
                                         src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid"
                                         alt=""></a>
-                                <h4>Eos Luibusdam</h4>
+                                <h4>Ayam Krispi</h4>
                                 <p class="ingredients">
                                     Lorem, deren, trataro, filede, nerada
                                 </p>
                                 <p class="price">
-                                    $12.95
+                                    Rp.12.000
                                 </p>
                             </div><!-- Menu Item -->
 
@@ -492,12 +492,12 @@
                                 <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img
                                         src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid"
                                         alt=""></a>
-                                <h4>Laboriosam Direva</h4>
+                                <h4>Lalapan</h4>
                                 <p class="ingredients">
                                     Lorem, deren, trataro, filede, nerada
                                 </p>
                                 <p class="price">
-                                    $9.95
+                                    Rp.2.000
                                 </p>
                             </div><!-- Menu Item -->
 
@@ -517,12 +517,12 @@
                                 <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img
                                         src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid"
                                         alt=""></a>
-                                <h4>Magnam Tiste</h4>
+                                <h4>Tahu Gejot</h4>
                                 <p class="ingredients">
                                     Lorem, deren, trataro, filede, nerada
                                 </p>
                                 <p class="price">
-                                    $5.95
+                                    Rp5.000
                                 </p>
                             </div><!-- Menu Item -->
 
@@ -530,12 +530,12 @@
                                 <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img
                                         src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid"
                                         alt=""></a>
-                                <h4>Aut Luia</h4>
+                                <h4>Lumpia basah/kering</h4>
                                 <p class="ingredients">
                                     Lorem, deren, trataro, filede, nerada
                                 </p>
                                 <p class="price">
-                                    $14.95
+                                    $7.000
                                 </p>
                             </div><!-- Menu Item -->
 
@@ -543,12 +543,12 @@
                                 <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img
                                         src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid"
                                         alt=""></a>
-                                <h4>Est Eligendi</h4>
+                                <h4>Kuetiaw</h4>
                                 <p class="ingredients">
                                     Lorem, deren, trataro, filede, nerada
                                 </p>
                                 <p class="price">
-                                    $8.95
+                                    Rp.7.000
                                 </p>
                             </div><!-- Menu Item -->
 
@@ -556,12 +556,12 @@
                                 <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img
                                         src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid"
                                         alt=""></a>
-                                <h4>Eos Luibusdam</h4>
+                                <h4>Salad</h4>
                                 <p class="ingredients">
                                     Lorem, deren, trataro, filede, nerada
                                 </p>
                                 <p class="price">
-                                    $12.95
+                                    Rp.5.000
                                 </p>
                             </div><!-- Menu Item -->
 
@@ -569,12 +569,12 @@
                                 <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img
                                         src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid"
                                         alt=""></a>
-                                <h4>Eos Luibusdam</h4>
+                                <h4>Ayam krispi</h4>
                                 <p class="ingredients">
                                     Lorem, deren, trataro, filede, nerada
                                 </p>
                                 <p class="price">
-                                    $12.95
+                                    Rp.12.000
                                 </p>
                             </div><!-- Menu Item -->
 
@@ -582,12 +582,12 @@
                                 <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img
                                         src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid"
                                         alt=""></a>
-                                <h4>Laboriosam Direva</h4>
+                                <h4>Lalapan</h4>
                                 <p class="ingredients">
                                     Lorem, deren, trataro, filede, nerada
                                 </p>
                                 <p class="price">
-                                    $9.95
+                                    Rp.2.000
                                 </p>
                             </div><!-- Menu Item -->
 
@@ -607,12 +607,12 @@
                                 <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img
                                         src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid"
                                         alt=""></a>
-                                <h4>Magnam Tiste</h4>
+                                <h4>Tahu Gejot</h4>
                                 <p class="ingredients">
                                     Lorem, deren, trataro, filede, nerada
                                 </p>
                                 <p class="price">
-                                    $5.95
+                                    Rp.7.000
                                 </p>
                             </div><!-- Menu Item -->
 
@@ -620,12 +620,12 @@
                                 <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img
                                         src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid"
                                         alt=""></a>
-                                <h4>Aut Luia</h4>
+                                <h4>Lumpia basah/kering</h4>
                                 <p class="ingredients">
                                     Lorem, deren, trataro, filede, nerada
                                 </p>
                                 <p class="price">
-                                    $14.95
+                                    Rp.7.000
                                 </p>
                             </div><!-- Menu Item -->
 
@@ -633,12 +633,12 @@
                                 <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img
                                         src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid"
                                         alt=""></a>
-                                <h4>Est Eligendi</h4>
+                                <h4>Kuetiaw</h4>
                                 <p class="ingredients">
                                     Lorem, deren, trataro, filede, nerada
                                 </p>
                                 <p class="price">
-                                    $8.95
+                                    Rp.10.000
                                 </p>
                             </div><!-- Menu Item -->
 
@@ -646,12 +646,12 @@
                                 <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img
                                         src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid"
                                         alt=""></a>
-                                <h4>Eos Luibusdam</h4>
+                                <h4>Salad</h4>
                                 <p class="ingredients">
                                     Lorem, deren, trataro, filede, nerada
                                 </p>
                                 <p class="price">
-                                    $12.95
+                                    Rp.5.000
                                 </p>
                             </div><!-- Menu Item -->
 
@@ -659,12 +659,12 @@
                                 <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img
                                         src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid"
                                         alt=""></a>
-                                <h4>Eos Luibusdam</h4>
+                                <h4>Ayam Krispi</h4>
                                 <p class="ingredients">
-                                    Lorem, deren, trataro, filede, nerada
+                                    ayam
                                 </p>
                                 <p class="price">
-                                    $12.95
+                                    $12.000
                                 </p>
                             </div><!-- Menu Item -->
 
@@ -672,12 +672,12 @@
                                 <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img
                                         src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid"
                                         alt=""></a>
-                                <h4>Laboriosam Direva</h4>
+                                <h4>Lalapan</h4>
                                 <p class="ingredients">
-                                    Lorem, deren, trataro, filede, nerada
+                                    sayuran segar
                                 </p>
                                 <p class="price">
-                                    $9.95
+                                    Rp.2.000
                                 </p>
                             </div><!-- Menu Item -->
 
@@ -708,13 +708,14 @@
                                         <div class="testimonial-content">
                                             <p>
                                                 <i class="bi bi-quote quote-icon-left"></i>
-                                                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum
-                                                suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh
-                                                et. Maecen aliquam, risus at semper.
+                                                Saya sangat senang menggunakan website Pos untuk memesan makanan.
+                                                Antarmuka yang intuitif dan kemudahan pembayaran membuat pengalaman saya
+                                                sangat menyenangkan. Saya dapat fokus pada pelajaran tanpa khawatir
+                                                tentang makanan, dan pesanan selalu tepat waktu. Terima kasih Pos!.
                                                 <i class="bi bi-quote quote-icon-right"></i>
                                             </p>
-                                            <h3>Saul Goodman</h3>
-                                            <h4>Ceo &amp; Founder</h4>
+                                            <h3>Effendy Gabriel Putra The second</h3>
+                                            <h4>Siswa &amp; Biasa</h4>
                                             <div class="stars">
                                                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                                     class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
@@ -737,13 +738,16 @@
                                         <div class="testimonial-content">
                                             <p>
                                                 <i class="bi bi-quote quote-icon-left"></i>
-                                                Export tempor illum tamen malis malis eram quae irure esse labore quem
-                                                cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua
-                                                noster fugiat irure amet legam anim culpa.
+                                                Sebagai penjual makanan, menggunakan platform Pos benar-benar merubah
+                                                cara saya berbisnis. Sistem pemesanan yang efisien dan pengelolaan stok
+                                                yang mudah membantu saya menjaga bisnis tetap berjalan lancar. Siswa
+                                                dapat dengan cepat menemukan menu saya dan memesan tanpa hambatan.
+                                                Sungguh solusi yang luar biasa!.
                                                 <i class="bi bi-quote quote-icon-right"></i>
                                             </p>
-                                            <h3>Sara Wilsson</h3>
-                                            <h4>Designer</h4>
+                                            <h3>Murid
+                                            </h3>
+                                            <h4>Partner POS</h4>
                                             <div class="stars">
                                                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                                     class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
@@ -766,13 +770,16 @@
                                         <div class="testimonial-content">
                                             <p>
                                                 <i class="bi bi-quote quote-icon-left"></i>
-                                                Enim nisi quem export duis labore cillum quae magna enim sint quorum
-                                                nulla quem veniam duis minim tempor labore quem eram duis noster aute
-                                                amet eram fore quis sint minim.
+                                                Sebagai orang tua, saya sangat mengapresiasi keberadaan website Pos. Ini
+                                                memberikan saya ketenangan pikiran karena anak saya dapat dengan mudah
+                                                memesan makanan tanpa harus meninggalkan kampus. Sistem yang aman dan
+                                                transparan membuat saya yakin bahwa anak saya mendapatkan makanan yang
+                                                baik dan terjamin."
+
                                                 <i class="bi bi-quote quote-icon-right"></i>
                                             </p>
                                             <h3>Jena Karlis</h3>
-                                            <h4>Store Owner</h4>
+                                            <h4>Orang Tua Murid</h4>
                                             <div class="stars">
                                                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                                     class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
@@ -795,13 +802,15 @@
                                         <div class="testimonial-content">
                                             <p>
                                                 <i class="bi bi-quote quote-icon-left"></i>
-                                                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam
-                                                tempor noster veniam enim culpa labore duis sunt culpa nulla illum
-                                                cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                                                Sebagai pihak sekolah, kami sangat senang dengan adopsi website Pos di
+                                                lingkungan kampus. Ini tidak hanya memudahkan siswa dalam memesan
+                                                makanan, tetapi juga menciptakan lingkungan yang lebih teratur dan
+                                                efisien. Transparansi pembayaran dan pelacakan pesanan membuat sistem
+                                                ini menjadi pilihan yang baik bagi kami."
                                                 <i class="bi bi-quote quote-icon-right"></i>
                                             </p>
-                                            <h3>John Larson</h3>
-                                            <h4>Entrepreneur</h4>
+                                            <h3>Pak Reza</h3>
+                                            <h4>Guru SMK Prakrya Internasional</h4>
                                             <div class="stars">
                                                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                                     class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
@@ -832,8 +841,8 @@
             <div class="container-fluid" data-aos="fade-up">
 
                 <div class="section-header">
-                    <h2>Events</h2>
-                    <p>Share <span>Your Moments</span> In Our Restaurant</p>
+                    <h2>Rekomendasi</h2>
+                    <p>Rekomendasi <span>partner Terbaik</span> Kami</p>
                 </div>
 
                 <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
@@ -841,31 +850,35 @@
 
                         <div class="swiper-slide event-item d-flex flex-column justify-content-end"
                             style="background-image: url(assets/img/events-1.jpg)">
-                            <h3>Custom Parties</h3>
-                            <div class="price align-self-start">$99</div>
+                            <h3>Lumpia Legend</h3>
+                            <div class="price align-self-start">XI-OTKP</div>
                             <p class="description">
-                                Quo corporis voluptas ea ad. Consectetur inventore sapiente ipsum voluptas eos omnis
-                                facere. Enim facilis veritatis id est rem repudiandae nulla expedita quas.
+                                Lumpia Legend Menjadi salah satu makanan favorit siswa SMK Prakarya internasional dengan
+                                rasanya yang sangat enak dan harganya yang terjangkau,Terbukti dengan Lumpia Mereka yang
+                                selalu habis.
                             </p>
                         </div><!-- End Event item -->
 
                         <div class="swiper-slide event-item d-flex flex-column justify-content-end"
                             style="background-image: url(assets/img/events-2.jpg)">
-                            <h3>Private Parties</h3>
-                            <div class="price align-self-start">$289</div>
+                            <h3>Es teh anget</h3>
+                            <div class="price align-self-start">XII-RPL</div>
                             <p class="description">
-                                In delectus sint qui et enim. Et ab repudiandae inventore quaerat doloribus. Facere nemo
-                                vero est ut dolores ea assumenda et. Delectus saepe accusamus aspernatur.
+                                Siapa sangka minuman yang awalnya hanya bercandaan receh saat di resto menjadi salah
+                                satu menu favorite diSMKPI,Dengan rasanya yang unik Dimana Panasnya teh bertemu dengan
+                                dinginya es batu.
                             </p>
                         </div><!-- End Event item -->
 
                         <div class="swiper-slide event-item d-flex flex-column justify-content-end"
                             style="background-image: url(assets/img/events-3.jpg)">
-                            <h3>Birthday Parties</h3>
-                            <div class="price align-self-start">$499</div>
+                            <h3>Donut Macha</h3>
+                            <div class="price align-self-start">X-MPLB</div>
                             <p class="description">
-                                Laborum aperiam atque omnis minus omnis est qui assumenda quos. Quis id sit quibusdam.
-                                Esse quisquam ducimus officia ipsum ut quibusdam maxime. Non enim perspiciatis.
+                                Donut macha Milik salah satu partner kami di kelas X-MPLB ini selalu menjadi primadona
+                                para murid,bahkan Mereka rela jauh jauh dari kampus 1 ke kampus 2 hanya untuk mencari
+                                donut macha yang terkenal sangat enak dan rasanya yang sangat enak dengan harga yang
+                                sangat terjangkau.
                             </p>
                         </div><!-- End Event item -->
 
