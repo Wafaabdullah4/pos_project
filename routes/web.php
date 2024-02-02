@@ -53,6 +53,7 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::resource('users', UserController::class);
     Route::get('/admin/siswa', [UserController::class, 'siswa'])->name('admin.siswa');
     Route::resource('menu', MenuController::class);
+    Route::resource('/menu', \App\Http\Controllers\MenuController::class);
 });
 
 /*------------------------------------------

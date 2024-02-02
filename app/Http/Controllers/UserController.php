@@ -27,7 +27,7 @@ class UserController extends Controller
         $users = User::all();
         return view('admin.siswa', compact('users'));
     }
-    
+
     public function create()
     {
         return view('admin.create');
@@ -68,7 +68,7 @@ class UserController extends Controller
     {
         // Retrieve the user from the database using the $id
         $user = User::find($id);
-    
+
         // Pass the $user variable to the view
         return view('admin.edit', compact('user'));
     }
@@ -109,7 +109,7 @@ class UserController extends Controller
         //get post by ID
         $users = User::findOrFail($id);
 
-        
+
         //delete post
         $users->delete();
 
@@ -117,4 +117,3 @@ class UserController extends Controller
         return redirect()->route('admin.siswa')->with(['success' => 'Data Berhasil Dihapus!']);
     }
 }
-
