@@ -1,6 +1,20 @@
 @extends('layouts.navSiswa')
 
 @section('content')
+<style>
+    /* CSS tambahan pada file Anda */
+.btn-purple {
+    background-color: #7d2ae8;
+    color: #fff;
+    border-color: #7d2ae8;
+}
+
+.btn-purple:hover {
+    background-color: #6a2490;
+    border-color: #6a2490;
+}
+
+</style>
     <!-- ======= Menu Section ======= -->
     <section id="menu" class="menu">
         <div class="container mt-5 mb-5">
@@ -16,62 +30,68 @@
                             <hr>
                             <div class="d-flex justify-content-between">
                                 <div>
-                                    <h4 class="text-primary">Harga: RP{{ $menus->harga }}</h4>
-                                    <p class="text-muted">Stok: {{ $menus->stock }}</p>
+                                    <h4 class="text" style="">Harga: {{ 'RP ' . number_format($menus->harga, 0, ',', '.') }}</h4>
+                                    <p class="text-sm">Stok: {{ $menus->stock }}</p>
                                 </div>
                             </div>
                             <hr>
                             <p>{{ $menus->content }}</p>
-                            <a href="{{ url('/menus') }}" class="btn btn-secondary mb-3">Kembali</a>
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#orderModal">Pesan
-                                Sekarang</button>
+                            <div class="d-flex justify-content-between mt-3">
+                                <a href="{{ url('/menus') }}" class="btn btn-secondary mt-3">Kembali</a>
+                                <button class="btn btn-primary mt-3" style="background-color: #7d2ae8" data-toggle="modal" data-target="#orderModal">Pesan
+                                    Sekarang</button>
+                            </div>
+
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+<!-- Modal -->
+<div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="orderModalLabel">Pesan Menu</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="orderForm" action="{{ url('/submit-order') }}" method="POST">
+                    @csrf
+                    <input type="hidden" name="menu_id" value="{{ $menus->id }}">
 
+                    <div class="form-group">
+                        <label for="quantity">Jumlah:</label>
+                        <input type="number" name="quantity" class="form-control" required>
+                    </div>
 
-        <!-- Modal -->
-        <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="orderModalLabel">Pesan Menu</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+                    @php
+                        use App\Models\User;
+                        $kurirs = User::where('type', 2)->get();
+                    @endphp
+                    <div class="form-group">
+                        <label for="kurir_id">Pilih Kurir:</label>
+                        <select name="kurir_id" class="form-control" required>
+                            @foreach ($kurirs as $kurir)
+                                <option value="{{ $kurir->id }}">{{ $kurir->name }}</option>
+                            @endforeach
+                        </select>
                     </div>
-                    <div class="modal-body">
-                        <form id="orderForm" action="{{ url('/submit-order') }}" method="POST">
-                            @csrf
-                            <input type="hidden" name="menu_id" value="{{ $menus->id }}">
-                            <div class="form-group">
-                                <label for="quantity">Jumlah:</label>
-                                <input type="number" name="quantity" class="form-control" required>
-                            </div>
-                            @php
-                                use App\Models\User;
-                                $kurirs = User::where('type', 2)->get();
-                            @endphp
-                            <div class="form-group">
-                                <label for="kurir_id">Pilih Kurir:</label>
-                                <select name="kurir_id" class="form-control" required>
-                                    @foreach ($kurirs as $kurir)
-                                        <option value="{{ $kurir->id }}">{{ $kurir->name }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Pesan Sekarang</button>
-                        </form>
+
+                    <div class="d-flex justify-content-between mt-3">
+                        <button type="button" class="btn btn-secondary rounded-pill py-2 px-4" data-dismiss="modal">Tutup</button>
+                        <button type="submit" class="btn btn-purple rounded-pill py-2 px-4">Pesan Sekarang</button>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
+    </div>
+</div>
+
 
         <!-- Tambahkan script di bagian bawah sebelum tag penutup </body> -->
         <script>

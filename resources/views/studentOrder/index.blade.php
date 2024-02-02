@@ -1,14 +1,12 @@
 @extends('layouts.navSiswa')
 
 @section('content')
-    {{-- <a href="{{ route('pesanans.create') }}" class="btn btn-success">Add Food</a> --}}
-    <div class="bg-dark">
+<section id="menu" class="menu">
+    <div class="container">
+        <h2>Riwayat Pesanan</h2>
+        <table class="table">
 
-    </div>
-    <table class="table mt-5" style="margin-top: 100px">
-        <div class="tabular--wrapper">
-            <div class="table-container">
-                <table>
+
                     <thead>
                         <tr>
                             <th>No</th>
@@ -42,7 +40,6 @@
                 </table>
             </div>
 
-        </div>
 
-    </table>
+</section>
 @endsection
