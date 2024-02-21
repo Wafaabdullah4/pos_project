@@ -36,10 +36,10 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
 
     Route::get('/home', [HomeController::class, 'home'])->name('home');
     Route::get('/myorder', [PesananController::class, 'myorder'])->name('myorder');
-    Route::get('/menus', [MenuController::class, 'menu'])->name('menus');
     Route::get('/menus/{id}', [MenuController::class, 'show'])->name('menus.show');
     Route::get('/orders', [OrderController::class, 'showOrders'])->name('orders.show');
     Route::post('/submit-order', [OrderController::class, 'storeOrder']);
+    Route::get('/menus', [MenuController::class, 'menu'])->name('menus');
 });
 
 /*------------------------------------------

@@ -15,6 +15,11 @@ class MenuController extends Controller
         $menus = Menu::latest()->paginate(5);
         return view('menu.index', compact('menus'));
     }
+    public function menu(): View
+    {
+        $menus = Menu::latest()->paginate(5);
+        return view('daftarmakanan', compact('menus'));
+    }
 
     public function create(): View
     {
@@ -107,5 +112,14 @@ class MenuController extends Controller
     private function deleteOldImage(Menu $menu)
     {
         Storage::delete('public/menu/' . $menu->image);
+    }
+
+    public function show(string $id): View
+    {
+        //get post by ID
+        $menus = Menu::findOrFail($id);
+
+        //render view with post
+        return view('show', compact('menus'));
     }
 }
